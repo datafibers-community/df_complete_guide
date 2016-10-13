@@ -3,7 +3,7 @@
 * Get to know about the project at [datafibers.com](http://datafibers.com/) | [datafibers.org](http://datafibers.org/)
 * Watch and Star us in [DataFibers Community GitHub](https://github.com/datafibers-community)
 ![](watch_and_Star_us.PNG)
-* Fork and Pull Request when you have ideas to contribute
+* Fork and Pull Request when you areready to contribute
 * Contact Us for participant at datafibers@gmail.com
 * Join our discussion and ask questions at datafibers@googlegroups.com
 * Hear our news and events @ Facebook or Twitter
