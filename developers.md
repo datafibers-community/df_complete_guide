@@ -17,7 +17,7 @@
 ## How to Contribute
 * Fork DF master branch to your own repository
 * Work on the code with your preferred Java IDE
-* Once done, check in your code as a monthly development * individual branch called: **development_YourName_FeatureName_YYYYMM** to your own repository
-* Create a full request to the monthly development branch * called: **development_YYYYMM** in DF repositories from your own branch
+* Once done, check in your code as a monthly development individual branch called **development_YourName_FeatureName_YYYYMM** to your own repository
+* Create a full request to the monthly development branch called: **development_YYYYMM** in DF repositories from your own branch
 * Do proper code merge and changes until you can successfully * merge your code
 * At every month end, release team will merge the monthly development branch to the master
