@@ -7,7 +7,7 @@ The software requirement for DataFibers are
 * Apache Flink >= 1.1.0
 * MongoDB
 
-is Oracle Java v1.8. Java installation varies by platform, so please check the JRE installation requirements for your platform. Before installing the DataFibers, double check your Java version:
+The Java runtime version is at least version 1.8. Java installation varies by platform, so please check the JRE installation version for your platform before installing the DataFibers using following command: 
 
     $ java -version
     
