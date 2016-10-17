@@ -1,6 +1,7 @@
 # Connects Configurations
 
 ## File Streaming Source
+File streaming source connect is used for streaming data in files to DataFibers' Kafka backbone (to one Kafka topic). This connect is compatible with official Kafka file source connect. The data in DF is quoted as String.
 ### Configuration Samples
 
     {
@@ -21,6 +22,7 @@
 | **topic** |Yes | N/A | The single Kafka topic name having data streamed.| 
 
 ## File Streaming Sink
+File streaming sink connect is used for streaming data into files from DataFibers' Kafka backbone (from topics). This connect is compatible with official Kafka file sink connect. The data streamed out from DF has to be quoted as String.
 ### Configuration Samples
 
     {
