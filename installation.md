@@ -18,48 +18,44 @@ Right now, DataFibers runs on Linux system. You can install various distribution
 
 ><i class="fa fa-info-circle"></i> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
 
-## Backbone Software
+## Environment Setup - Docker
+## Environment Setup - Vagrant
+The pre-build scripts for vagrant setup is available in [DF_DEMO](https://github.com/datafibers-community/df_demo) repository. This pre-build VM has following softs installed.
+* Java 1.8
+* Apache Maven 3.0.5
+* Git 1.9.1
+* Apache Hadoop v2.5
+* Apache Hive 1.2.1
+* Confluent 3.0.1 with Apache Kafka 0.10.0.1
+* Apache Flink 1.1.3
+
+Please following steps below to get the VM up running.
+* Make sure Vagrant is installed from [here](https://www.vagrantup.com/downloads.html) or [here](https://github.com/tknerr/bills-kitchen). Run below commands either in Linux or [GitBash Console](https://git-for-windows.github.io/) in Windows.
+* Get the setup scripts
+      git clone https://github.com/datafibers-community/df_demo.git
+      cd df_demo/df-environment/df-env-vagrant
+
+* To run default environment setup, run
+      vagrant up
+><i class="fa fa-info-circle"></i> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
+    
+* To customize the environment setup, run [installvm.sh](https://github.com/datafibers/df_demo/blob/master/df-environment/df-env-vagrant/installvm.sh) is used to generate different profiles for VM setup.  
+      ./installvm.sh
+
+## Environment Setup - Manually Installation
+
+### Backbone Software
 Backbone software are basic components which DataFibers leverage for big data processing. 
 
-### Flink
+#### Flink
+#### Kafka
+#### Mongo
 
-### Kafka
 
-### Mongo
-
-## Developers Packages
+### Developer Tools
 Developer software packages are optional for general DataFibers' users. This packages are generally needed for self compile or code contribution.
+#### IDE
+#### Git
+#### Maven
 
-### Git
-
-### Maven
-
-## DataFibers Packages
-
-----
-
-2) Download and install various software in your Linux environment
-- Git: google and install git for Windows; once you install git, create a git account
-- Kafka:
-Download latest kafka confluent (above version 3.0.1), upload it to your Linux machine, and extract it under Linux folder /opt 
-e.g. 
-cd/opt
-tar -xvf confluent-3.0.1-2.11.tar.gz
-
-- Flink:
-Download latest flink (above version 2.11), upload it to your Linux machine, and extract it under Linux folder /opt 
-e.g. 
-
-- Mongodb:
-
-- Maven
-- Git
-- Java 8
-- Eclipse Luna 4.4.2
-- 
-- Hardoop
-- Hive
-- Spark
-
-
-2. 
+## Install DF Packages
