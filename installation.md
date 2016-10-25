@@ -37,7 +37,7 @@ Please following steps below to get the VM up running.
 
 * To run default environment setup, run
       vagrant up
-><i class="fa fa-info-circle"></i> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
+><i class="fa fa-info-circle"></i> Virtualbox v1.8.1 has issues working with Vagrant in Windows. Pls. refer [here](troubleshooting_area.html#Vagarant_Issues) to resolve..
     
 * To customize the environment setup, run [installvm.sh](https://github.com/datafibers/df_demo/blob/master/df-environment/df-env-vagrant/installvm.sh) is used to generate different profiles for VM setup.  
       ./installvm.sh
