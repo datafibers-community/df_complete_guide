@@ -1,6 +1,6 @@
 # Troubleshooting Area
 ## Setup Issues
-### Vagarant Issues
+### Vagrant Issues
 #### Mount folder failure
 Vagrant is not able to mount /vagrant folder in version 1.8.0 for windows. 
 
