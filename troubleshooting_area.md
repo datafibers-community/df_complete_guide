@@ -1,7 +1,7 @@
 # Troubleshooting Area
 ## Setup Issues
 ### Vagarant Issues
-#### 1. Mount folder failure
+#### Mount folder failure
 Vagrant is not able to mount /vagrant folder in version 1.8.0 for windows. 
 
 **Solution**: 
@@ -18,7 +18,7 @@ Update the code windows_unc_path() in C:\HashiCorp\Vagrant\embedded\gems\gems\va
         end
 
 ### Elastic Issues
-#### 1. localhost unreachable
+#### localhost unreachable
 Elastic cannot access localhost:9200 from host machine. 
 
 **Solution**, pls. do following two settings
