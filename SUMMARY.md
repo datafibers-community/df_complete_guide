@@ -18,4 +18,5 @@
    * UDF API
 * [Best Practice](case_studies.md)
    * [Case Study](case_study.md)
+   * Troubleshooting Area
 
