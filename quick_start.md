@@ -1,3 +1,8 @@
 # Quick Start
+## Start DF Dependencies
 
-><i class="fa fa-info-circle"></i> Virtualbox v1.8.1 has issues working with Vagrant in Windows. Pls. refer [here](troubleshooting_area.html#Vagarant_Issues) to resolve..
+## Start DF Applications
+><i class="fa fa-cog" aria-hidden="true"></i> DF application has couple of command line options. You can use -h or --help options to see more details ```java -jar datafiber_jar_file.jar -h```
+
+
+## Run A Demo
