@@ -42,3 +42,8 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
     
       bind_ip = 0.0.0.0
 
+### Kafka Connect Issue
+#### Kafka Avro Console Consumer cannot consume message from producer
+When we use regular Kafka producer/publisher, such as [code here](https://gist.github.com/datafibers/d063b255b50fa34515c0ac9e24d4485c), to send Avro message to Kafka, the regular avro console consumer like below will have exception reported.
+    kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-beginning
+
