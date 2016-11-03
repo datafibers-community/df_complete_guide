@@ -33,3 +33,12 @@ When doing NG-Admin local domain test. Browser has such error **"*XMLHttpRequest
 'Access-Control-Allow-Origin' header is present on the requested Resource. Origin 'null' is therefore not allowed access.*"** 
 
 **Solution**, since the browser is blocking it as it usually allows a request in the same origin for security reasons. The easy way is to just add this **[Browser Extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en-US)** in google chrome to allow access using CORS.
+
+### MongoDB Issue
+#### Unable access mongodb from out side of VirtualBox
+It compains "Network Connect Issue" when connecting MongoDB from tool, such as [robomongo](https://robomongo.org/download) outside of VirtualBox.
+
+**Solution**, make sure in your ```/etc/mongodb.conf``` file you have the following line,
+    
+      bind_ip = 0.0.0.0
+
