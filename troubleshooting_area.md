@@ -45,5 +45,10 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
 ### Kafka Connect Issue
 #### Kafka Avro Console Consumer cannot consume message from producer
 When we use regular Kafka producer/publisher, such as [code here](https://gist.github.com/datafibers/d063b255b50fa34515c0ac9e24d4485c), to send Avro message to Kafka, the regular avro console consumer like below will have exception reported.
+
     kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-beginning
 
+**Solution**, every avro message inside of Confluent Platform has following structure:
+
+    < magic byte 0x0 1 byte > < schema id (4 bytes) > < Avro blob >    
+Therefore, we need to manually add these extra bytes before each Avro message.
