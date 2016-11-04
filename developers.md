@@ -20,6 +20,8 @@ DataFibers' issues and kanban borad are two very important tools we are using fo
 * [Issue List](https://github.com/datafibers-community/df_data_service/issues) - This is where we log all backlog items
 * [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) - This is where we manage and track the progress of work items.
 
+><i class="fa fa-info-circle"></i> Do not forget to assign the issues under your name once you start working on it.
+>
 
 ## How to Contribute
 * Fork DF master branch to your own repository
