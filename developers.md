@@ -15,6 +15,12 @@
 * [df_demo](https://github.com/datafibers-community/df_demo) - This is where we build demo for DataFibers and other tookit
 * [df_complete_guide](https://github.com/datafibers-community/df_complete_guide) - This is the source for this book
 
+## Project Management
+DataFibers' issues and kanban borad are two very important tools we are using for DataFibers management and delivery.
+* [Issue List](https://github.com/datafibers-community/df_data_service/issues) - This is where we log all backlog items
+* [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) - This is where we manage and track the progress of work items.
+
+
 ## How to Contribute
 * Fork DF master branch to your own repository
 * Work on the code with your preferred Java IDE
