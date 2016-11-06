@@ -36,9 +36,10 @@ Figure 1.3 Kappa Architecture for Unified Processing
 Many companies have started or been staring evolving from pure batch to pure stream big data processing architecture. There are reasons arranged from legacy warehouse maintenance to technology maturity. Some company are still in the Batch or Lambda architectures. However, Lambda Architecture is [NOT recommended](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)  because of complexity and overhead, unless the company has very closed dependency on legacy data pipe and their big data architecture was already matured in the last three years. Kappa is where leading data company approaching.
 
 
-## Service
+## Methodology
 
 ### Data Oriented and Centric
+Data-oriented design has actually been around for decades in one form or another. It gets special attention when big data era arrives. If we carefully exam the use cases around big data, we are not difficulty in finding out that any application is nothing without its data, data is all we have. All the applications are all writing to output data, consuming input data, or sharing data among each others. The form of that data can be extremely complex, or so simple it requires no documentation at all, but all applications produce and need these data here or there. If the ultimate result of an application is data, and all input can be represented by data, and it is recognized that all data transforms are not performed in a vacuum, then a software development methodology can be founded on these principles, the principles of understanding and using the data makes a methodology called data-oriented and centric design.
 
 <p style="text-align: center;">
 <img src="data_oriented.jpg" alt="Data Oriented and Centric"><br>
