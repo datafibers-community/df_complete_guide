@@ -42,7 +42,14 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
     
       bind_ip = 0.0.0.0
 
-### Kafka Connect Issue
+### Kafka Issue
+#### Cannot connect Kafka in VirtualBox from outside IDE, such as IDEA
+When we need to debug the code, we prefer to use IDE outside of the VirtualBox to connect to the Kafka Service in the VirtalBox. We need to ensure following settings are in place.
+**Solution**, add following settings in the the **server.property** file for Kafka.
+
+    host.name=localhost
+    advertised.host.name=127.0.0.1
+
 #### Kafka Avro Console Consumer cannot consume message from producer
 When we use regular Kafka producer/publisher, such as [code here](https://gist.github.com/datafibers/d063b255b50fa34515c0ac9e24d4485c), to send Avro message to Kafka, the regular avro console consumer like below will have exception reported.
 
