@@ -55,6 +55,7 @@ When we use regular Kafka producer/publisher, such as [code here](https://gist.g
 
     kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-beginning
 
+
 **Solution**, every avro message inside of Confluent Platform has following structure:
 
     < magic byte 0x0 1 byte > < schema id (4 bytes) > < Avro blob >    
