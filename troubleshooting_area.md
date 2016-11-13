@@ -63,7 +63,7 @@ Update the code windows_unc_path() in C:\HashiCorp\Vagrant\embedded\gems\gems\va
 #### Hive Driver Not Found
 When using hive interpreter in Zeppelin, it reports "org.apache.hive.jdbc.HiveDriver class java.lang.ClassNotFoundExceptionClassNotFoundException"
 
-Solution: Copy proper hadoop and hive jar to the Zeppelin interpreter folder and restart Zeppelin.
+**Solution**: Copy proper hadoop and hive jar to the Zeppelin interpreter folder and restart Zeppelin.
 
     cp /opt/hive/lib/hive-jdbc-1.2.1-standalone.jar /opt/zeppelin/interpreter/jdbc/
     cp /opt/hadoop/share/hadoop/common/hadoop-common-2.6.0.jar /opt/zeppelin/interpreter/jdbc/
