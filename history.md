@@ -39,12 +39,18 @@ Many companies have started or been staring evolving from pure batch to pure str
 ## Methodology
 
 ### Data Oriented and Centric
-Data-oriented design has actually been around for decades in one form or another. It gets special attention when big data era arrives. If we carefully exam the use cases around big data, we are not difficulty in finding out that any application is nothing without its data, data is all we have. All the applications are all writing to output data, consuming input data, or sharing data among each others. The form of that data can be extremely complex, or so simple it requires no documentation at all, but all applications produce and need these data here or there. If the ultimate result of an application is data, and all input can be represented by data, and it is recognized that all data transforms are not performed in a vacuum, then a software development methodology can be founded on these principles, the principles of understanding and using the data makes a methodology called data-oriented and centric design.
+Data-oriented design has actually been around for decades in one form or another. It gets special attention when big data era arrives. If we carefully exam the use cases around big data, we are not difficulty in finding out that any application is nothing without its data, data is all we have.
+
+All the applications are all writing to output data, consuming input data, or sharing data among each others. The form of that data can be extremely complex, or so simple it requires no documentation at all, but all applications produce and need these data here or there. If the ultimate result of an application is data, and all input can be represented by data, and it is recognized that all data transforms are not performed in a vacuum, then a software development methodology can be founded on these principles, the principles of understanding and using the data makes a methodology called data-oriented and centric design.
 
 <p style="text-align: center;">
 <img src="data_oriented.jpg" alt="Data Oriented and Centric"><br>
 Figure 1.4 Data Oriented and Centric
 </p>
 ### Data Application vs. Framework
+There are fundamental differences between the roles of application and framework especially on big data domain. Framework libraries provide reusable services that encapsulate lower-level functionality in an abstraction that offers functionality with an easy to use API for higher level code within a variety of different applications. Currently, most open source big data technologies focus on the framework on top of generic use cases, such as Hadoop, Spark, etc. 
 
+With maturity of open source big data framework, open source big data application focusing on out-box use cases gains lots of attentions. We see big data applications, such as [Apache Kylin](http://kylin.apache.org/) and [Metron](http://metron.incubator.apache.org/), more popular on their ease of usage, ready for use cases.
+
+At DataFibers, we believe open source big data will definitely go for flourish especially when we see more framework becomes mature and stable. Big data applications will leverage various of matured big data framework to speed up landing big data technology and innovations to business use cases. 
 
