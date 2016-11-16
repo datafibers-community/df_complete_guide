@@ -24,6 +24,8 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
 **Solution**, make sure in your ```/etc/mongod.conf``` file you have the following line and restart the mongodb ```sudo service mongod restart```to make it work immediately.
     
     bind_ip = 0.0.0.0
+    
+If it still does not work, comment above line and try it again.    
 
 ### Kafka Issue
 #### Cannot connect Kafka in VirtualBox from outside IDE, such as IDEA
