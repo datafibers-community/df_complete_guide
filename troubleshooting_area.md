@@ -21,7 +21,7 @@ Elastic cannot access localhost:9200 from host machine.
 #### Unable access mongodb from out side of VirtualBox
 It compains "Network Connect Issue" when connecting MongoDB from tool, such as [robomongo](https://robomongo.org/download) outside of VirtualBox.
 
-**Solution**, make sure in your ```/etc/mongodb.conf``` file you have the following line and restart the mongodb ```sudo service mongod restart```to make it work immediately.
+**Solution**, make sure in your ```/etc/mongod.conf``` file you have the following line and restart the mongodb ```sudo service mongod restart```to make it work immediately.
     
     bind_ip = 0.0.0.0
 
