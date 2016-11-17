@@ -59,6 +59,7 @@ Update the code windows_unc_path() in C:\HashiCorp\Vagrant\embedded\gems\gems\va
       path
     end
 
+Or you can copy and replace using file [here](https://raw.githubusercontent.com/datafibers-community/df_demo/master/df-environment/df-env-vagrant/vagrant_patch/platform.rb).
 
 
 ### Zeppelin Issue
