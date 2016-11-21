@@ -10,8 +10,7 @@
         "fontFamily": "DejaVu Sans"
     },
     "plugins": [
-        "navigator",
-        "googledocs"
+        "navigator"
     ],
     "pluginsConfig": {}
 }
