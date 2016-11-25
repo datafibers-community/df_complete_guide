@@ -20,7 +20,7 @@ Right now, DataFibers runs on Linux system. You can install various distribution
 
 ## Environment Setup - Docker
 ## Environment Setup - Vagrant
-The pre-build scripts for vagrant setup is available in [DF_DEMO](https://github.com/datafibers-community/df_demo) repository. This pre-build VM has following softs installed.
+The pre-build scripts for vagrant setup is available in [DF_DEMO](https://github.com/datafibers-community/df_demo) repository. This pre-build VM has following softs installed automatically.
 * Java 1.8
 * Apache Maven 3.0.5
 * Git 1.9.1
