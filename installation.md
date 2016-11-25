@@ -41,6 +41,8 @@ Please following steps below to get the VM up running.
     
 * To customize the environment setup, run [installvm.sh](https://github.com/datafibers/df_demo/blob/master/df-environment/df-env-vagrant/installvm.sh) is used to generate different profiles for VM setup.  
       ./installvm.sh
+><i class="fa fa-info-circle"></i> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
+
 
 ## Environment Setup - Manually Installation
 
