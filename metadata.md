@@ -33,5 +33,25 @@ The purpose of Job model is to keep all information for task/job either for conn
 
 
 ## Meta
+Meta view will be a read-only view in DataFibers web console.
+
+| Attribute | Data Type| Usage |
+| -- | -- | -- |
+| topicId | String | Unique number string which is generated from mongodb, used as job id. |
+| topic | String | Identify subject of data. It is now Kafka topic. |
+| schemaID | String | Identify the schema in schema registry. |
+| schemaName | String | Identify the schema name in schema registry. |
+| schemaVersion | int | Identify the schema version associated with the topic in schema registry. |
+| sourceList | HashMap<String, String> | Indetify the list of source as <type, path> where we ingest to this topic. |
+| targetList | HashMap<String, String> | Indetify the list of target as <type, path> where we extract from this topic. |
+| consumeList | [String] | Indetify the list of consumer group of Kafka. |
+| volumn | String | Indetify the volumn of data in this topic in terms of MB/GB/TB. |
+| namespace | String | java package/maven like namespace for topic category and permission. |
+| topicCreateDate | String  | Datetime when the topic is created. |
+| dataCreateDate | String  | Datetime when the topic is firstly populated data. |
+| dataUpdateDate | String  | Datetime when the latest data is been written. |
+| topicStatus | String  | Indetify whether the topic is being used or not, such as ACTIVE, NOACTIVE, DELETED, etc. |
+| permissions | String  | Reserved for future permission control on the row. |
 
 ## History
+History view will be a read-only view in DataFibers web console.
