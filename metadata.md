@@ -17,7 +17,7 @@ The purpose of Job model is to keep all information for task/job either for conn
         private HashMap<String, String> connectorConfig; 
         ...
 
-| Attribute | Data Type| Usage |
+| Attribute | Type| Usage |
 | -- | -- | -- |
 | id | String | Unique number string which is generated from mongodb, used as internal task id. |
 | taskId | String | Identify each task in a job. It is manually set now, will deprecated. |
@@ -35,7 +35,7 @@ The purpose of Job model is to keep all information for task/job either for conn
 ## Meta
 Meta view will be a read-only view in DataFibers web console.
 
-| Attribute | Data Type| Usage |
+| Attribute | Type| Usage |
 | -- | -- | -- |
 | topicId | String | Unique number string which is generated from mongodb, used as job id. |
 | topic | String | Identify subject of data. It is now Kafka topic. |
@@ -56,7 +56,7 @@ Meta view will be a read-only view in DataFibers web console.
 ## History
 History view will be a read-only view in DataFibers web console.
 
-| Attribute | Data Type| Usage |
+| Attribute | Type| Usage |
 | -- | -- | -- |
 | id | String | Unique number string which is generated from mongodb, used as history id. |
 | taskId | String | Identify each task in a job. |
