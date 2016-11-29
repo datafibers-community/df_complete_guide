@@ -19,7 +19,7 @@ The purpose of Job model is to keep all information for task/job either for conn
 
 | Attribute | Data Type| Usage |
 | -- | -- | -- |
-| id | String |Unique number string which is generated from mongodb, used as job id. |
+| id | String | Unique number string which is generated from mongodb, used as job id. |
 | taskId | String | Identify each task in a job. It is manually set now. |
 | name | String | Name of the job. |
 | connector | String | Name of the connector/task used. This maps to Kafka Connect name attribute. |
