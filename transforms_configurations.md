@@ -1,7 +1,7 @@
 # Transforms Configurations
 
 
-## 1. Flink Stream SQL
+## Flink Stream SQL Generic
 
 ### Configuration Samples
 
@@ -33,3 +33,29 @@
 Example of json and json string
 * json: {"name":"BABA", "location":"China"}
 * json string: "{\"name\":\"BABA\", \"location\":\"China\"}"
+
+## Flink Stream SQL A2J
+Below is the configuration for Flink stream SQL from Avro data to Json data.
+
+### Configuration Samples
+
+    {
+        "group.id":"consumer3",
+        "topic.for.query":"test",
+        "topic.for.result":"stock",
+        "schema.subject":"test-value"
+        "trans.sql":"SELECT STREAM symbol, name FROM test"
+    }
+### Configuration Details
+
+| Config | Request | Default | Comments |
+| -- | -- | -- | -- |
+| **group.id** | Optional | df_trans_flink_group_id | Kafka consumer id.|
+| **static.avro.schema** |Optional | N/A | The AVRO schema string. | 
+| **schema.subject** |Optional | N/A | The AVRO schema subject in schema registry. | 
+| **schema.registry** |Optional | localhost:8081 | The host and port for schema registry. | 
+| **topic.for.query** |Yes | N/A | The Kafka topic to query data. | 
+| **topic.for.result** |Yes | N/A | The Kafka topic to output data | 
+| **trans.sql** |Yes | N/A | The Flink Stream SQL query. | 
+
+**Note**, you must specify Avro schema either by **schema.subject** or **static.avro.schema**.
