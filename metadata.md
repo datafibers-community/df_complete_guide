@@ -19,8 +19,8 @@ The purpose of Job model is to keep all information for task/job either for conn
 
 | Attribute | Data Type| Usage |
 | -- | -- | -- |
-| id | String | Unique number string which is generated from mongodb, used as job id. |
-| taskId | String | Identify each task in a job. It is manually set now. |
+| id | String | Unique number string which is generated from mongodb, used as internal task id. |
+| taskId | String | Identify each task in a job. It is manually set now, will deprecated. |
 | name | String | Name of the job. |
 | connector | String | Name of the connector/task used. This maps to Kafka Connect name attribute. |
 | connectorType | Enum | Identify proper connector type from enum. |
@@ -55,3 +55,20 @@ Meta view will be a read-only view in DataFibers web console.
 
 ## History
 History view will be a read-only view in DataFibers web console.
+
+| Attribute | Data Type| Usage |
+| -- | -- | -- |
+| id | String | Unique number string which is generated from mongodb, used as history id. |
+| taskId | String | Identify each task in a job. |
+| taskName | String | Name of the task. |
+| StartDate | String | Timestamp when the task starts. |
+| EndDate | String | Timestamp when the task ends. |
+| rows | String | Rows that task processed sucessfully. |
+| rowsBad | String | Rows that task cannot processed. |
+| throughput | String | rows/seconds for the rows processed. |
+| status | String | Identify the task status, such as RUNNING, FAILED, SUCESSED etc. |
+| schedule | String | describe the schedule of the task. |
+| submitBy | String | Identify whom/where the task is submitted. |
+| sourceList | HashMap<String, String> | Identify the list of source as <type, path> that this task ingest. |
+| targetList | HashMap<String, String> | Identify the list of target as <type, path> that this task extract. |
+| validation | HashMap<String, [String]> | Identify the validation <rule, [target, status]> for the task. |
