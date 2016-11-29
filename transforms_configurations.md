@@ -40,7 +40,6 @@ Below is the configuration for Flink stream SQL from Avro data to Json data.
 ### Configuration Samples
 
     {
-        "group.id":"consumer3",
         "topic.for.query":"test",
         "topic.for.result":"stock",
         "schema.subject":"test-value"
