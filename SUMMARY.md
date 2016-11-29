@@ -8,7 +8,7 @@
    * [Installation](installation.md)
    * [Quick Start](quick_start.md)
    * [Design Overview](design_overview.md)
-       * Metadata
+       * [Metadata](metadata.md)
    * [Developers](developers.md)
 * [Configurations](configurations.md)
    * [Job Configurations](job_configurations.md)
