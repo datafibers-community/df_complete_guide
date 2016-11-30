@@ -9,7 +9,7 @@
    * [Quick Start](quick_start.md)
    * [Design Overview](design_overview.md)
        * [Metadata](metadata.md)
-       * Reserved Resources
+       * [Reserved Resources](reserved_resources.md)
    * [Developers](developers.md)
 * [Configurations](configurations.md)
    * [Job Configurations](job_configurations.md)
