@@ -10,7 +10,8 @@
         "fontFamily": "DejaVu Sans"
     },
     "plugins": [
-        "navigator"
+        "navigator",
+        "new-flowchart"
     ],
     "pluginsConfig": {}
 }
