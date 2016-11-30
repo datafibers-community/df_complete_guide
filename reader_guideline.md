@@ -6,7 +6,7 @@ In terms of using DataFibers, there is no specialized skills or previous experie
 
 To be able to understand the core design and extensive usage as well as code contribution, experience with Java is needed, but the key concepts underlying the design and development are explained clearly in proper sections.
 
-There are generally two learning paths avaliable for different type of users.
+There are generally two learning paths available for different type of users.
 
 * For analysts, data engineers ...
      
