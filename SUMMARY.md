@@ -20,4 +20,5 @@
 * [Best Practice](case_studies.md)
    * [Case Study](case_study.md)
    * [Troubleshooting Area](troubleshooting_area.md)
+   * Book Feature Demo
 
