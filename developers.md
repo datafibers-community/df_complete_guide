@@ -2,13 +2,15 @@
 ## Know More About Us
 * Get to know about the project at [datafibers.com](http://datafibers.com/) | [datafibers.org](http://datafibers.org/)
 * Watch and Star us in [DataFibers Community GitHub](https://github.com/datafibers-community)
-![](watch_and_Star_us.PNG)
+![](http://i.imgur.com/pvgE3yK.gif)
 * Fork and Pull Request when you are ready to contribute
 * Contact Us for participant at [datafibers@gmail.com](mailto:datafibers@gmail.com)
 * Join our discussion and ask questions at [datafibers@googlegroups.com](mailto:datafibers@googlegroups.com)
 * Chat live with us at [DF Gitter](https://gitter.im/datafibers/df?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 * Hear our news and events @ [Facebook](http://www.facebook.com/data.fibers) or [Twitter](http://twitter.com/datafibers1) or Wechat account **DataFibers Community**
 * Our Meetup is incoming
+
+
 
 ## GitHub Repositories
 * [df_data_service](https://github.com/datafibers-community/df_data_service) - This is core DataFibers services
