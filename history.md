@@ -7,15 +7,15 @@ But gathering in-the-moment insights with complex data processing in the fly is 
 The big data processing architecture adapts to the speed and demanding for exploring values behind of the big data. The architectures of big data processing have three milestones during this evolution. 
 
 ### Batch Processing Architecture
-In the earlier period of big data processing, aka Hadoop 1.0 era, most big data processing was based on Hive/Pig and MapReduce batch jobs. At that time, big data batch job gained attention over traditional data warehouse applications in terms of cost, stability, and performance. At nowadays, batching processing is still playing an important role in most enterprises as transaction from legacy data processing framework. 
+In the earlier period of big data processing, aka. Hadoop 1.0 era, most big data processing was based on MapReduce batch based jobs to process data from landing area to data mart layer. At that time, big data batch job gained attention over traditional data warehouse applications in terms of cost, stability, and performance, however, still keeps the similar processing design and pattern. At nowadays, batching processing is still playing an important role in most enterprises as transaction from legacy data processing framework. 
 
 <p style="text-align: center;">
-<img src="https://hadoopabcd.files.wordpress.com/2015/03/hadoop1.png" alt="Hadoop MapReduce Based Batch Processing"><br>
+<img src="image/batchpure.png" alt="Hadoop MapReduce Based Batch Processing"><br>
 Figure 1.1 Hadoop MapReduce Based Batch Processing
 </p>
 
 ### Hybrid Processing Architecture
-When [IoT](https://en.wikipedia.org/wiki/Internet_of_things) becomes popular, there are quite a lot demanding on the speed of acquiring data. Apache Storm, Apache Spark, Flink, Kafka attracts more attention on their steaming data processing. In addition, more use cases using ad-hoc analytic queries on Hadoop data make batch processing, the single solution, awkward and frustrated. Lots demo or POC are started as sperate streaming based big data processing system parallel running with batch processing system. What's more, [Lambda Architecture](https://en.wikipedia.org/wiki/Lambda_architecture) comes to the picture of big data processing for the very first time.
+When [IoT](https://en.wikipedia.org/wiki/Internet_of_things) becomes popular, there are quite a lot demanding on the speed of acquiring data. Apache Storm, Apache Spark, Flink, Kafka attracts more attention on their steaming data processing. However, more use cases are still using ad-hoc analytic queries on Hadoop batch processing, the single solution, awkward and frustrated. Lots demo or POC are started as separate streaming based big data processing system parallel running with batch processing system. What's more, [Lambda Architecture](https://en.wikipedia.org/wiki/Lambda_architecture) comes to the picture of big data processing for the very first time.
 
 <p style="text-align: center;">
 <img src="image/lambda.png" alt="Lambda Architecture for Hybrid Data Processing"><br>
