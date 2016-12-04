@@ -18,7 +18,7 @@ Figure 1.1 Hadoop MapReduce Based Batch Processing
 When [IoT](https://en.wikipedia.org/wiki/Internet_of_things) becomes popular, there are quite a lot demanding on the speed of acquiring data. Apache Storm, Apache Spark, Flink, Kafka attracts more attention on their steaming data processing. In addition, more use cases using ad-hoc analytic queries on Hadoop data make batch processing, the single solution, awkward and frustrated. Lots demo or POC are started as sperate streaming based big data processing system parallel running with batch processing system. What's more, [Lambda Architecture](https://en.wikipedia.org/wiki/Lambda_architecture) comes to the picture of big data processing for the very first time.
 
 <p style="text-align: center;">
-<img src="http://lambda-architecture.net/img/la-overview_small.png" alt="Lambda Architecture for Hybrid Data Processing"><br>
+<img src="image/lambda.png" alt="Lambda Architecture for Hybrid Data Processing"><br>
 Figure 1.2 Lambda Architecture for Hybrid Data Processing
 </p>
 
