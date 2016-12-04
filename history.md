@@ -28,7 +28,7 @@ The Lambda Architecture is designed to satisfy the needs for combined analysis o
 When there are lots of start-up coming into big data processing technology, they usually do not have burden like legacy system or history of data. Most of them jump directly into streaming processing especially for mobile related business or projects. Experienced gained when more people got used to streaming architecture and tentative to use the same processing architecture for batch data as well. In another saying, this comes to the unified big data processing architecture for various of type of big data processing, batch or stream. In addition, this is a pure streaming data processing architecture and reuse for batch processing as well. [Kappa Architecture](http://milinda.pathirage.org/kappa-architecture.com/) is one of very interesting and promising design by removing complex layers from Lambda Architecture - a Kappa Architecture is a simplification of Lambda Architecture. And, this is where DataFibers start from too.
 
 <p style="text-align: center;">
-<img src="https://www.ericsson.com/research-blog/wp-content/uploads/2015/11/LambdaKappa1_2.png" alt="Kappa Architecture for Unified Processing"><br>
+<img src="image/kappa.png" alt="Kappa Architecture for Unified Processing"><br>
 Figure 1.3 Kappa Architecture for Unified Processing
 </p>
 
