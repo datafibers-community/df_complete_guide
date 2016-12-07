@@ -11,8 +11,7 @@
     },
     "plugins": [
         "navigator",
-        "-puml",
-        "-flowchart-full"
+        "-puml"
     ],
     "pluginsConfig": {}
 }
