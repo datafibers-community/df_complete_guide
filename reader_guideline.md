@@ -9,9 +9,7 @@ To be able to understand the core design and extensive usage as well as code con
 There are generally two learning paths available for different type of users.
 
 * For analysts, data engineers ...
-     
       You'll need to read
-
 * For developers, 
       to be added
 * For contributors,
