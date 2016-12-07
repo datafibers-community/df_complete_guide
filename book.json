@@ -10,7 +10,6 @@
         "fontFamily": "DejaVu Sans"
     },
     "plugins": [
-        "navigator",
         "-puml"
     ],
     "pluginsConfig": {}
