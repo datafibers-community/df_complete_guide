@@ -7,7 +7,10 @@
 >
 ><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
 
-
-{% plantuml %}
-Bob->Alice : hello
-{% endplantuml %}
+``` sequence
+Title: Here is a title
+A->B: Normal line
+B-->C: Dashed line
+C->>D: Open arrow
+D-->>A: Dashed open arrow
+```
