@@ -10,7 +10,8 @@
         "fontFamily": "DejaVu Sans"
     },
     "plugins": [
-        "navigator"
+        "navigator",
+        "js-sequence-diagram"
     ],
     "pluginsConfig": {}
 }
