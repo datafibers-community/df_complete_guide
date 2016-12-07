@@ -7,15 +7,27 @@
 >
 ><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
 
-``` sequence
-Title: Here is a title
-actor Foo1
-boundary Foo2
-control Foo3
-entity Foo4
-database Foo5
-Foo1 -> Foo2 : To boundary
-Foo1 -> Foo3 : To control
-Foo1 -> Foo4 : To entity
-Foo1 -> Foo5 : To database
+{% plantuml %}
+Bob->Alice : hello
+{% endplantuml %}
+
+```chart
+{
+    "title": {
+        "text": "Fruits number"
+    },
+    "tooltip": {},
+    "legend": {
+        "data":["Number"]
+    },
+    "xAxis": {
+        "data": ["Apple","Banana","Peach","Pear","Grape","Kiwi"]
+    },
+    "yAxis": {},
+    "series": [{
+        "name": "Number",
+        "type": "bar",
+        "data": [5, 20, 36, 10, 10, 20]
+    }]
+}
 ```
