@@ -11,7 +11,7 @@
     },
     "plugins": [
         "navigator",
-        "-js-sequence-diagram"
+        "js-sequence-diagram"
     ],
     "pluginsConfig": {}
 }
