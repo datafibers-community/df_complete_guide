@@ -12,7 +12,8 @@
     "plugins": [
         "navigator",
         "js-sequence-diagram",
-        "puml"
+        "puml",
+        "echarts"
     ],
     "pluginsConfig": {}
 }
