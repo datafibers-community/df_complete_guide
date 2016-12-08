@@ -44,6 +44,6 @@ Please following steps below to get the VM up running.
 ><i class="fa fa-info-circle"></i> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
 
 ## Install DF Packages
-To install DataFibers packages as well as scripts tools, run follow command in the shell as follows.
+To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
 
     curl -s https://raw.githubusercontent.com/datafibers-community/df_demo/master/df-environment/df-env-app-init/install_df.sh | bash -
