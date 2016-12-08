@@ -22,6 +22,6 @@ deactivate Kafka_Connect
 DF_Service  -> MongoDB: Update Repository
 MongoDB-> DF_Service: Update Response
 Rest_Client <-- DF_Service : Response LAUD Connect
-
+deactivate DF_Service
 @enduml
 
