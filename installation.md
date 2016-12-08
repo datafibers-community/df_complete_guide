@@ -43,21 +43,7 @@ Please following steps below to get the VM up running.
       ./installvm.sh
 ><i class="fa fa-info-circle"></i> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
 
-
-## Environment Setup - Manually Installation
-
-### Backbone Software
-Backbone software are basic components which DataFibers leverage for big data processing. 
-
-#### Flink
-#### Kafka
-#### Mongo
-
-
-### Developer Tools
-Developer software packages are optional for general DataFibers' users. This packages are generally needed for self compile or code contribution.
-#### IDE
-#### Git
-#### Maven
-
 ## Install DF Packages
+To install DataFibers packages as well as scripts tools, run follow command in the shell as follows.
+
+    curl -s https://raw.githubusercontent.com/datafibers-community/df_demo/master/df-environment/df-env-app-init/install_df.sh | bash -
