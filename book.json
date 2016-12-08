@@ -11,7 +11,8 @@
     },
     "plugins": [
         "navigator",
-        "puml"
+        "puml",
+        "echarts"
     ],
     "pluginsConfig": {}
 }
