@@ -3,7 +3,7 @@ Most DataFibers components support list, add, update, and delete operations. In 
 ## Connect LAUD
 The Connect follows LAUD operation as follows.
 
-@startuml
+{% plantuml %}
 actor Rest_Client
 
 activate DF_Service
@@ -23,5 +23,5 @@ DF_Service  -> MongoDB: Update Repository
 MongoDB-> DF_Service: Update Response
 Rest_Client <-- DF_Service : Response LAUD Connect
 deactivate DF_Service
-@enduml
+{% endplantuml %}
 
