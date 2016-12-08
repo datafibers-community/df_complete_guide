@@ -8,7 +8,21 @@
 ><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
 
 {% plantuml %}
-Bob->Alice : hello
+actor Rest_Client
+
+Rest_Client -> DF_Service : Request to ACID Connect
+
+activate DF_Service
+DF_Service -> Kafka_Connect : ACID Connect Request
+
+activate Kafka_Connect
+Kafka_Connect -> Kafka_Connect : ACID Kafka Connect
+DF_Service <-- Kafka_Connect : ACID Kafka Connect Response
+deactivate Kafka_Connect
+
+Ticket -> DF_Service : ACID Repository - MongoDB
+Rest_Client <-- DF_Service : Response ACID Connect
+deactivate DF_Service
 {% endplantuml %}
 
 ```chart
