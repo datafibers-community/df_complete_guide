@@ -46,4 +46,4 @@ Please following steps below to get the VM up running.
 ## Install DF Packages
 To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
 
-    curl -s https://raw.githubusercontent.com/datafibers-community/df_demo/master/df-environment/df-env-app-init/install_df.sh | bash -
+    curl -sL http://www.datafibers.com/install | bash -
