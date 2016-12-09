@@ -1,5 +1,12 @@
 # Design Overview
-Most DataFibers components support list, add, update, and delete operations. In short, we call it **LAUD** operation.
+Most DataFibers components support ***list***, ***add***, ***update***, and ***delete*** operations. In short, we call it **LAUD** operation. Below is over DataFibers communication sequence diagram for below core functional components.
+
+* Connect LAUD: Procedure for connect operations
+* Transform LUAD: Procedure for transform operations
+* Schema Registry LUA: Procedure for schema operations 
+* Install L: Procedure for list of installed connects/transforms
+* Status Sync.: Procedure for synchronize DF Status
+
 ## Connect LAUD
 The Connect follows LAUD operation as follows.
 
@@ -9,7 +16,6 @@ actor Rest_Client
 activate DF_Service
 database MongoDB
 activate Kafka_Connect
-activate Flink_ResourceMgr
 
 Rest_Client -> DF_Service : Request to LAUD Connect
 
@@ -17,11 +23,77 @@ DF_Service -> Kafka_Connect : Forward LAUD Connect Request
 
 Kafka_Connect -> Kafka_Connect : LAUD Kafka Connect
 DF_Service <-- Kafka_Connect : LAUD Kafka Connect Response
-deactivate Kafka_Connect
 
 DF_Service  -> MongoDB: Update Repository
 MongoDB-> DF_Service: Update Response
 Rest_Client <-- DF_Service : Response LAUD Connect
-deactivate DF_Service
 {% endplantuml %}
 
+## Transform LAUD
+The Connect follows LAUD operation as follows.
+
+{% plantuml %}
+actor Rest_Client
+
+activate DF_Service
+database MongoDB
+activate Flink_ResourceMgr
+
+Rest_Client -> DF_Service : Request to LAUD Transform
+
+DF_Service -> Flink_ResourceMgr : Forward LAUD Transform Request
+
+Flink_ResourceMgr -> Flink_ResourceMgr : LAUD Transform
+DF_Service <-- Flink_ResourceMgr: LAUD Transform Response
+
+DF_Service  -> MongoDB: Repo. Update Request
+MongoDB-> DF_Service: Repo. Update Response
+Rest_Client <-- DF_Service : Response LAUD Transform
+{% endplantuml %}
+
+## Schema Registry LAU
+Schema registry is only support ***list***, ***add***, and ***update*** operations because of Confluent API limitation.
+
+{% plantuml %}
+actor Rest_Client
+
+activate DF_Service
+activate Schema_Registry
+
+Rest_Client -> DF_Service : Request to LAU Avro Schema 
+
+DF_Service -> Schema_Registry : Forward LAU Avro Schema Request
+
+Schema_Registry -> Schema_Registry : LAU Avro Schema
+
+DF_Service <-- Schema_Registry: LAU Transform Response
+
+Rest_Client <-- DF_Service : Response LAU Avro Schema
+{% endplantuml %}
+
+## Install L
+Installed connect or transform view only supports a read-only ***list*** operation as follows.
+
+{% plantuml %}
+actor Rest_Client
+
+activate DF_Service
+activate Kafka_Connect
+
+Rest_Client -> DF_Service : Request to list installed 
+
+DF_Service -> Kafka_Connect : Forward list installed  Request
+
+Kafka_Connect -> Kafka_Connect : Get list installed 
+
+DF_Service <-- Kafka_Connect: list installed Response
+
+Rest_Client <-- DF_Service : Response list installed 
+{% endplantuml %}
+
+## Status Sync.
+There are following sub-components here.
+* Kafka Connect status sync.
+* Flink Transform status sync
+* Import all Kafka connects when started
+* Meta-data sync to repository
