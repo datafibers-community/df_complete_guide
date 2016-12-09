@@ -1,11 +1,11 @@
 # Design Overview
-Most DataFibers components support ***list***, ***add***, ***update***, and ***delete*** operations. In short, we call it **LAUD** operation. Below is over DataFibers communication sequence diagram for below core functional components.
+Most DataFibers components support ***L***ist, ***A***dd, ***U***pdate, and ***D***elete operations. In short, we call it **LAUD** operation. Below is over DataFibers communication sequence diagram for below core functional components.
 
-* Connect LAUD: Procedure for connect operations
-* Transform LUAD: Procedure for transform operations
-* Schema Registry LUA: Procedure for schema operations 
-* Install L: Procedure for list of installed connects/transforms
-* Status Sync.: Procedure for synchronize DF Status
+* Connect LAUD: Procedure for connect operations.
+* Transform LUAD: Procedure for transform operations.
+* Schema Registry LUA: Procedure for schema operations. 
+* Install L: Procedure for list of installed connects/transforms.
+* Status Sync.: Procedure for synchronize DataFibers' Status.
 
 ## Connect LAUD
 The Connect follows LAUD operation as follows.
@@ -94,6 +94,6 @@ Rest_Client <-- DF_Service : Response list installed
 ## Status Sync.
 There are following sub-components here.
 * Kafka Connect status sync.
-* Flink Transform status sync
-* Import all Kafka connects when started
-* Meta-data sync to repository
+* Flink Transform status sync.
+* Import all Kafka connects when started.
+* Meta-data sync to repository.
