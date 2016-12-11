@@ -94,6 +94,7 @@ Rest_Client <-- DF_Service : Response list installed
 ## Status Sync.
 There are following sub-components here.
 * Kafka Connect status sync.
+
 * Flink Transform status sync.
 * Import all Kafka connects when started.
 * Meta-data sync to repository.
