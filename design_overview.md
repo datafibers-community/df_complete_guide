@@ -18,14 +18,11 @@ database MongoDB
 activate Kafka_Connect
 
 Rest_Client -> DF_Service : Request to LAUD Connect
-
 DF_Service -> Kafka_Connect : Forward LAUD Connect Request
-
 Kafka_Connect -> Kafka_Connect : LAUD Kafka Connect
 DF_Service <-- Kafka_Connect : LAUD Kafka Connect Response
-
 DF_Service  -> MongoDB: Update Repository
-MongoDB-> DF_Service: Update Response
+MongoDB --> DF_Service: Update Response
 Rest_Client <-- DF_Service : Response LAUD Connect
 {% endplantuml %}
 
@@ -34,20 +31,16 @@ The Connect follows LAUD operation as follows.
 
 {% plantuml %}
 actor Rest_Client
-
 activate DF_Service
 database MongoDB
 activate Flink_ResourceMgr
 
 Rest_Client -> DF_Service : Request to LAUD Transform
-
 DF_Service -> Flink_ResourceMgr : Forward LAUD Transform Request
-
 Flink_ResourceMgr -> Flink_ResourceMgr : LAUD Transform
 DF_Service <-- Flink_ResourceMgr: LAUD Transform Response
-
 DF_Service  -> MongoDB: Repo. Update Request
-MongoDB-> DF_Service: Repo. Update Response
+MongoDB --> DF_Service: Repo. Update Response
 Rest_Client <-- DF_Service : Response LAUD Transform
 {% endplantuml %}
 
@@ -56,18 +49,13 @@ Schema registry is only support ***list***, ***add***, and ***update*** operatio
 
 {% plantuml %}
 actor Rest_Client
-
 activate DF_Service
 activate Schema_Registry
 
 Rest_Client -> DF_Service : Request to LAU Avro Schema 
-
 DF_Service -> Schema_Registry : Forward LAU Avro Schema Request
-
 Schema_Registry -> Schema_Registry : LAU Avro Schema
-
 DF_Service <-- Schema_Registry: LAU Transform Response
-
 Rest_Client <-- DF_Service : Response LAU Avro Schema
 {% endplantuml %}
 
@@ -76,18 +64,13 @@ Installed connect or transform view only supports a read-only ***list*** operati
 
 {% plantuml %}
 actor Rest_Client
-
 activate DF_Service
 activate Kafka_Connect
 
 Rest_Client -> DF_Service : Request to list installed 
-
 DF_Service -> Kafka_Connect : Forward list installed  Request
-
 Kafka_Connect -> Kafka_Connect : Get list installed 
-
 DF_Service <-- Kafka_Connect: list installed Response
-
 Rest_Client <-- DF_Service : Response list installed 
 {% endplantuml %}
 
@@ -96,21 +79,24 @@ There are following sub-components here.
 * Kafka Connect status sync.
 
 {% plantuml %}
-actor Vert.x_setPeriodic
+actor vert.x 
 
 activate DF_Service
+database MongoDB
 activate Kafka_Connect
 
-Vert.x_setPeriodic -> DF_Service : Request to refresh Connect Status every 10 sec.
-
-DF_Service -> Kafka_Connect : Forward list installed  Request
-
-Kafka_Connect -> Kafka_Connect : Get status for installed 
-
-DF_Service <-- Kafka_Connect: list installed Response
-
-Rest_Client <-- DF_Service : Response list installed 
+vert.x -> DF_Service : Request to refresh Connect status
+note right: Use vertx.setPeriodic to \ncheck every 10 sec.
+DF_Service -> MongoDB : Request list of active Connect
+DF_Service <-- MongoDB : Response list of active Connect
+DF_Service -> Kafka_Connect: Loop to request status for each active Connect
+Kafka_Connect --> DF_Service : Response status for each active Connect
+MongoDB <- DF_Service : Request to check/update Connect status
+note right: if the status has no change, \ngo to next Connect
+MongoDB --> DF_Service : Response Connect status updated
+vert.x <-- DF_Service : Response to refresh status complete
 {% endplantuml %}
+
 * Flink Transform status sync.
 * Import all Kafka connects when started.
 * Meta-data sync to repository.
