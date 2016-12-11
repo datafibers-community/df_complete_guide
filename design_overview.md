@@ -95,6 +95,22 @@ Rest_Client <-- DF_Service : Response list installed
 There are following sub-components here.
 * Kafka Connect status sync.
 
+{% plantuml %}
+actor Vert.x_setPeriodic
+
+activate DF_Service
+activate Kafka_Connect
+
+Vert.x_setPeriodic -> DF_Service : Request to refresh Connect Status every 10 sec.
+
+DF_Service -> Kafka_Connect : Forward list installed  Request
+
+Kafka_Connect -> Kafka_Connect : Get status for installed 
+
+DF_Service <-- Kafka_Connect: list installed Response
+
+Rest_Client <-- DF_Service : Response list installed 
+{% endplantuml %}
 * Flink Transform status sync.
 * Import all Kafka connects when started.
 * Meta-data sync to repository.
