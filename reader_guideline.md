@@ -17,8 +17,8 @@ There are generally two learning paths available for different type of users.
       
       
 Following annotations are used in this book.
-><i class="fa fa-info-circle"></i> This is for information.
->
-><i class="fa fa-exclamation-circle" aria-hidden="true"></i> This is for pitfall
->
-><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
+><img src="image/information.png"> This is for information.
+
+><img src="image/warning.png"> This is for pitfall.
+
+><img src="image/tip.png"> This is for tips.

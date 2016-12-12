@@ -8,9 +8,9 @@
 
 ><img src="image/information.png"> This is for information.
 
-><img src="image/warning.png"> This is for information.
+><img src="image/warning.png"> This is for pitfall.
 
-><img src="image/tip.png"> This is for information.
+><img src="image/tip.png"> This is for tips.
 
 ## PlantUML
 {% plantuml %}
