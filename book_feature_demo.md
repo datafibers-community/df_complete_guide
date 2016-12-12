@@ -3,27 +3,16 @@
 ## Reference
 1. [PlantUML Viewer](https://www.planttext.com/)
 2. [PlantUML Cheatsheet](http://ogom.github.io/draw_uml/plantuml/)
-3. 
-
-
-
 
 ## Annotations
-><i class="fa fa-info-circle"></i> This is for information.
->
-><i class="fa fa-exclamation-circle" aria-hidden="true"></i> This is for pitfall
->
-><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
 
+><img src="image/information.png"> This is for information.
 
-> #### Info::Info
->
-> cotent
+><img src="image/warning.png"> This is for information.
 
-> ==== Info::Info
->
-> cotent
+><img src="image/tip.png"> This is for information.
 
+## PlantUML
 {% plantuml %}
 actor Rest_Client
 
@@ -42,6 +31,7 @@ Rest_Client <-- DF_Service : Response ACID Connect
 deactivate DF_Service
 {% endplantuml %}
 
+## EnChart
 ```chart
 {
     "title": {
