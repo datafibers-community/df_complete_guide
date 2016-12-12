@@ -79,22 +79,18 @@ There are following sub-components here.
 * Kafka Connect status sync.
 
 {% plantuml %}
-actor vert.x 
-
 activate DF_Service
 database MongoDB
 activate Kafka_Connect
 
-vert.x -> DF_Service : Request to refresh Connect status
-note right: Use vertx.setPeriodic to \ncheck every 10 sec.
 DF_Service -> MongoDB : Request list of active Connect
+note right: Use vertx.setPeriodic to \ncheck every 10 sec.
 DF_Service <-- MongoDB : Response list of active Connect
 DF_Service -> Kafka_Connect: Loop to request status for each active Connect
 Kafka_Connect --> DF_Service : Response status for each active Connect
 MongoDB <- DF_Service : Request to check/update Connect status
 note right: if the status has no change, \ngo to next Connect
 MongoDB --> DF_Service : Response Connect status updated
-vert.x <-- DF_Service : Response to refresh status complete
 {% endplantuml %}
 
 * Flink Transform status sync.
