@@ -27,6 +27,34 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
     
 If it still does not work, comment above line and try it again.    
 
+#### How to setup an oplog on a single MongoDB instance
+[MongoDB Connect Source](https://github.com/DataReply/kafka-connect-mongodb) uses Mongodb oplog to fetch data. The MongoDB oplog allows you to keep track of changes that have happened on your database in real-time. This is a very useful tool that isn’t offered out of the box with a single server instance. You can follow these steps to enable to oplog on a standalone MongoDB instance.
+
+1. Add following lines in your /etc/mongodb.conf file
+
+       replSet=rs0
+       oplogSize=1024
+This will give your MongoDB server a replica set identity of rs0 and will allow your oplog to grow upto 1024mb. 
+
+1. Restart mongo
+
+       sudo service mongod restart
+1. Go to Mongo shell and issue rs.initiate() on the local database. You'll see **oplog.rs** created.
+
+       ~$ mongo
+       MongoDB shell version: 3.0.14
+       > use local
+       switched to db local
+       > rs.initiate()
+       {
+         "info2" : "no configuration explicitly specified -- making one",
+         "me" : "mongo:27017",
+         "info" : "Config now saved locally.  Should come online in about a minute.",
+         "ok" : 1
+       }
+       > show collections
+       oplog.rs
+ 
 ### Kafka Issue
 #### Cannot connect Kafka in VirtualBox from outside IDE, such as IDEA
 When we need to debug the code, we prefer to use IDE outside of the VirtualBox to connect to the Kafka Service in the VirtalBox. We need to ensure following settings are in place.
