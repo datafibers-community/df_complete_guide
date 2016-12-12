@@ -1,18 +1,18 @@
 {
-    "structure": {
-        "readme": "introduction.md"
-    },
-    "styles": {
-        "website": "styles/website.css"
-    },
-    "pdf": {
-        "paperSize": "letter",
-        "fontFamily": "DejaVu Sans"
-    },
     "plugins": [
         "navigator",
         "puml",
-        "echarts"
+        "echarts",
+        "callouts"
     ],
-    "pluginsConfig": {}
+    "structure": {
+        "readme": "introduction.md"
+    },
+    "pdf": {
+        "fontFamily": "DejaVu Sans",
+        "paperSize": "letter"
+    },
+    "styles": {
+        "website": "styles/website.css"
+    }
 }
