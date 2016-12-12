@@ -15,6 +15,21 @@
 >
 ><i class="fa fa-cog" aria-hidden="true"></i> This is for tips.
 
+> **Info** Info
+
+> **Note** Note
+
+> **Tag** Tag
+
+> **Comment** Comment
+
+> **Hint** Hint
+> **Success** Success
+> **Warning** Warning
+> **Caution** Caution
+> **Danger** Danger
+> **Quote** Quote
+
 {% plantuml %}
 actor Rest_Client
 
