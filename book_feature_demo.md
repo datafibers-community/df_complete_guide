@@ -13,10 +13,11 @@
 ><img src="image/tip.png"> This is for tips.
 
 test
+<div>
 > #### Info::title
 >
 > cotent
-
+</div>
 
 ## PlantUML
 {% plantuml %}
