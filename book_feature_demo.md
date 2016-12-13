@@ -12,6 +12,11 @@
 
 ><img src="image/tip.png"> This is for tips.
 
+> #### Info::title
+>
+> cotent
+
+
 ## PlantUML
 {% plantuml %}
 actor Rest_Client
