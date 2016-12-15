@@ -6,11 +6,11 @@
 
 ## Annotations
 
-><img src="image/information.png"> This is for information.
+><img src="image/information.jpg"> This is for information.
 
-><img src="image/warning.png"> This is for pitfall.
+><img src="image/warning.jpg"> This is for pitfall.
 
-><img src="image/tip.png"> This is for tips.
+><img src="image/tip.jpg"> This is for tips.
 
 ## PlantUML
 {% plantuml %}
