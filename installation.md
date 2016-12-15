@@ -16,7 +16,7 @@ Various installation options are listed in the sections below. Select the approa
 ## Operation System
 Right now, DataFibers runs on Linux system. You can install various distribution, such as Ubuntu, Redhat, etc locally or in virtual machines, such as [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-><img src="image/information.jpg"> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
+><img src="image/information.jpg" width="45" height="45"/> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
 
 ## Environment Setup - Docker
 ## Environment Setup - Vagrant
@@ -37,11 +37,11 @@ Please following steps below to get the VM up running.
 
 * To run default environment setup, run
       vagrant up
-><img src="image/warning.jpg"> Virtualbox v1.8.1 has issues working with Vagrant in Windows. Pls. refer [here](troubleshooting_area.html#Vagarant_Issues) to resolve.
+><img src="image/warning.jpg" width="45" height="45"/> Virtualbox v1.8.1 has issues working with Vagrant in Windows. Pls. refer [here](troubleshooting_area.html#Vagarant_Issues) to resolve.
     
 * To customize the environment setup, run [installvm.sh](https://github.com/datafibers/df_demo/blob/master/df-environment/df-env-vagrant/installvm.sh) is used to generate different profiles for VM setup.  
       ./installvm.sh
-><img src="image/information.jpg"> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
+><img src="image/information.jpg" width="45" height="45"/> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
 
 ## Install DF Packages
 To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
