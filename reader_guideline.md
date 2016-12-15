@@ -17,8 +17,8 @@ There are generally two learning paths available for different type of users.
       
       
 Following annotations are used in this book.
-><img src="image/information.png"> This is for information.
+><img src="image/information.jpg"> This is for information.
 
-><img src="image/warning.png"> This is for pitfall.
+><img src="image/warning.jpg"> This is for pitfalls.
 
-><img src="image/tip.png"> This is for tips.
+><img src="image/tip.jpg"> This is for tips.
