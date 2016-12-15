@@ -16,7 +16,7 @@ Various installation options are listed in the sections below. Select the approa
 ## Operation System
 Right now, DataFibers runs on Linux system. You can install various distribution, such as Ubuntu, Redhat, etc locally or in virtual machines, such as [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-><img src="image/information.png"> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
+><img src="image/information.jpg"> To visualize multiple core OS, make sure your host machine's BIOS visualization features are enabled .
 
 ## Environment Setup - Docker
 ## Environment Setup - Vagrant
