@@ -52,7 +52,7 @@ Figure 2.1 Forward Port in VirtualBox for Debug
 
 Also, make sure all of the DF dependecy application, such as Kafka, ZooKeeper, have their port forward outside of VirtualBox. Then, we can debug run the entrance function at DFInitService.main().
 <p style="text-align: center;">
-<img src="image/debug_run_idea.PNG" align="middle" width="474" height="443"/><br>
+<img src="image/debug_run_idea.png" align="middle" width="474" height="443"/><br>
 Figure 2.2 Debug DF DataService in IDEA
 </p>
 
