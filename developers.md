@@ -45,11 +45,15 @@ There are generally two ways to debug in DF applications
 Server debug is to run server application in debug mode. In this case, we still keep DF dependecy environment, such as Kafka, running inside of VirtualBox, but to run the DF Data Service as server in debug mode outside of VirtualBox.
 
 In order to make this work, we'll need to reforward DF appliation related port, such as 8000 (for UI) and 8080 (for REST Service) to other port number, such as 8000 to 7000, to make it avaliable for the DF application outside of VirtualBox as follows.
-<img src="image/Debug_Port.PNG" align="middle" width="475" height="330"/>
+<p style="text-align: center;">
+<img src="image/Debug_Port.PNG" align="middle" width="475" height="330"/><br>
+Figure 2.1 Forward Port in VirtualBox for Debug
+</p>
 
 Also, make sure all of the DF dependecy application, such as Kafka, ZooKeeper, have their port forward outside of VirtualBox. Then, we can debug run the entrance function at DFInitService.main().
+<p style="text-align: center;">
+<img src="image/debug_run_idea.PNG" align="middle" width="474" height="443"/><br>
+Figure 2.2 Debug DF DataService in IDEA
+</p>
 
-
-
-
-* Client Debug: Run client application in debug mode.
+### Client Debug: Run client application in debug mode.
