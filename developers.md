@@ -56,4 +56,8 @@ Also, make sure all of the DF dependecy application, such as Kafka, ZooKeeper, h
 Figure 2.2 Debug DF DataService in IDEA
 </p>
 
-### Client Debug: Run client application in debug mode.
+### Client Debug
+Client side debug is to run client application in debug mode by connecting full DF service in the VirtualBox. All port forwarding should be in place to work in this mode. For features closely related to the DF dependecy application, such as Kafka, ZooKeeper, Flink, etc, you can easily use this mode.
+
+If you meet any exception regarding to connection timeout especially on Kafka or MongoDB, you can refer to the [troubleshooting area](troubleshooting_area.html#Vagarant_Issues) in this guideline.
+
