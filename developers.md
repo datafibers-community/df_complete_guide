@@ -25,13 +25,16 @@ DataFibers' issues and kanban borad are two very important tools we are using fo
 * [Issue List](https://github.com/datafibers-community/df_data_service/issues) - This is where we log all backlog items
 * [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) - This is where we manage and track the progress of work items.
 
-><i class="fa fa-info-circle"></i> Do not forget to assign the issues under your name once you start working on it.
+><img src="image/tip.jpg" width="45" height="45"/> Do not forget to assign the issues under your name once you start working on it.
 >
 
 ## How to Contribute
-* Fork DF master branch to your own repository
-* Work on the code with your preferred Java IDE
-* Once done, check in your code as a monthly development individual branch called **development_YourName_FeatureName_YYYYMM** to your own repository
-* Create a full request to the monthly development branch called: **development_YYYYMM** in DF repositories from your own branch
-* Do proper code merge and changes until you can successfully merge your code
-* At every month end, release team will merge the monthly development branch to the master
+* Fork DF master branch to your own repository.
+* Switch to the latest branch.
+* Work on the code with your preferred Java IDE.
+* Once done, checkin your code changes to your own GitHub repository.
+* Create a branch pull request from **your_github_repo.development_YYYYMM** to **df_github_repo.development_YYYYMM**.
+* Do proper code merge and changes until you can successfully send the pull request.
+* The other DataFibers developers will review, comment, and approve your pull request and merge to **df_github_repo.development_YYYYMM**.
+* At the end of every month, release team will merge the monthly development branch to the master having changes from all pulled. All issues related in the [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) at ***Done & To Be Merged*** area will be closed and removed from the Kanban.
+* Then, a new branch will be created for the next month as active development branch.
