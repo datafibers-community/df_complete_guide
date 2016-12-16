@@ -38,3 +38,13 @@ DataFibers' issues and kanban borad are two very important tools we are using fo
 * The other DataFibers developers will review, comment, and approve your pull request and merge to **df_github_repo.development_YYYYMM**.
 * At the end of every month, release team will merge the monthly development branch to the master having changes from all pulled. All issues related in the [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) at ***Done & To Be Merged*** area will be closed and removed from the Kanban.
 * Then, a new branch will be created for the next month as active development branch.
+
+## How to Debug
+There are generally two ways to debug in DF applications
+### Server Debug
+Server debug is to run server application in debug mode. In this case, we still keep DF dependecy environment, such as Kafka, running inside of VirtualBox, but to run the DF Data Service as server in debug mode outside of VirtualBox.
+
+In order to make this work, we'll need to reforward DF appliation related port, such as 8000 (for UI) and 8080 (for REST Service) to other port number, such as 8000 to 7000, to make it avaliable for the DF application outside of VirtualBox as follows.
+![](image/Debug_Port.PNG)
+
+* Client Debug: Run client application in debug mode.
