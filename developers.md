@@ -16,6 +16,9 @@
 * [df_data_service](https://github.com/datafibers-community/df_data_service) - This is core DataFibers services
 * [df_demo](https://github.com/datafibers-community/df_demo) - This is where we build demo for DataFibers and other tookit
 * [df_complete_guide](https://github.com/datafibers-community/df_complete_guide) - This is the source for this book
+* [df_certified_connects](https://github.com/datafibers-community/df_certified_connects) - This is where we keep the connects self made or certified for DataFibers
+* [df_api_doc](https://github.com/datafibers-community/df_api_doc) - This is script for rest api document generator as well as latest document backup
+* [df_doc](https://github.com/datafibers-community/df_doc) - This is where we keep materials for rugular meetup and trainings
 
 ## Project Management
 DataFibers' issues and kanban borad are two very important tools we are using for DataFibers management and delivery.
