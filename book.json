@@ -2,8 +2,7 @@
     "plugins": [
         "navigator",
         "puml",
-        "echarts",
-        "codepen"
+        "echarts"
     ],
     "structure": {
         "readme": "introduction.md"
