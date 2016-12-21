@@ -61,3 +61,7 @@ Client side debug is to run client application in debug mode by connecting full 
 
 If you meet any exception regarding to connection timeout especially on Kafka or MongoDB, you can refer to the [troubleshooting area](troubleshooting_area.html#Vagarant_Issues) in this guideline.
 
+><img src="image/tip.jpg" width="45" height="45"/> The DataFibers application jar set log level to INFO by default. To switch the log level to DEBUG, add -d or --debug as command line option, such as ```java -jar target/df-data-service-1.1-SNAPSHOT-fat.jar -d```
+>
+
+
