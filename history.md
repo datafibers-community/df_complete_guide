@@ -44,7 +44,7 @@ Data-oriented design has actually been around for decades in one form or another
 All the applications are all writing to output data, consuming input data, or sharing data among each others. The form of that data can be extremely complex, or so simple it requires no documentation at all, but all applications produce and need these data here or there. If the ultimate result of an application is data, and all input can be represented by data, and it is recognized that all data transforms are not performed in a vacuum, then a software development methodology can be founded on these principles, the principles of understanding and using the data makes a methodology called data-oriented and centric design.
 
 <p style="text-align: center;">
-<img src="data_oriented.jpg" alt="Data Oriented and Centric"><br>
+<img src="image/data_oriented.jpg" alt="Data Oriented and Centric"><br>
 Figure 1.4 Data Oriented and Centric
 </p>
 ### Data Application vs. Framework
