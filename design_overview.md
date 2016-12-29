@@ -78,7 +78,7 @@ Rest_Client <-- DF_Service : Response list installed
 There are following sub-components here.
 
 ### Kafka Connect status sync.
-DataFibers launches a background deamon for regular synchnize the Kafka connect status with what's in the reposioty (mongoDB).
+DataFibers application launches a background daemon for regular synchronizing the Kafka connect status with what's in the repository (MongoDB).
 
 {% plantuml %}
 activate DF_Service
@@ -96,6 +96,7 @@ MongoDB --> DF_Service : Response Connect status updated
 {% endplantuml %}
 
 #### Meta-data sync to repository.
+DataFibers application does not involve into the metadata sync path directly, except launch the MongoDBSink connect and creating a Avro schema for the metadata.
 
 {% plantuml %}
 activate Connect
@@ -106,7 +107,7 @@ database MongoDB
 Connect -> Kafka: Send metadata
 note right: Send to df_meta topic
 Kafka <- Kafka_Connect : Fetch data form df_meta
-note left: MongoDBSink Deamon
+note left: MongoDBSink Daemon
 Kafka --> Kafka_Connect : Response metadata from the topic
 Kafka_Connect -> MongoDB: Sink metadata
 Kafka_Connect <-- MongoDB: Response sink done
