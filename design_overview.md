@@ -95,7 +95,7 @@ note right: if the status has no change, \ngo to next Connect
 MongoDB --> DF_Service : Response Connect status updated
 {% endplantuml %}
 
-#### Meta-data sync to repository.
+### Meta-data sync to repository.
 DataFibers application does not involve into the metadata sync path directly, except launch the MongoDBSink connect and creating a Avro schema for the metadata.
 
 {% plantuml %}
@@ -114,7 +114,7 @@ Kafka_Connect <-- MongoDB: Response sink done
 {% endplantuml %}
 
 
-#### Flink Transform status sync.
-#### Import all Kafka connects when started.
+### Flink Transform status sync.
+### Import all Kafka connects when started.
 
 
