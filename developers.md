@@ -39,6 +39,10 @@ DataFibers' issues and kanban borad are two very important tools we are using fo
 * At the end of every month, release team will merge the monthly development branch to the master having changes from all pulled. All issues related in the [Kanban Board](https://github.com/orgs/datafibers-community/projects/1?fullscreen=true) at ***Done & To Be Merged*** area will be closed and removed from the Kanban.
 * Then, a new branch will be created for the next month as active development branch.
 
+><img src="image/information.jpg" width="45" height="45"/> When release team merges the pull request, please choose ***create a merge commit*** in the **Merge pull request** option by clicking the right arrow button and choose as below picture. As result, the code commit and contribution made in the feature branch will be carried over master branch.
+
+>![](https://help.github.com/assets/images/help/pull_requests/select-squash-and-merge-from-drop-down-menu.png)
+
 ## How to Debug
 There are generally two ways to debug in DF applications
 ### Server Debug
