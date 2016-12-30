@@ -41,9 +41,24 @@ Please following steps below to get the VM up running.
     
 * To customize the environment setup, run [installvm.sh](https://github.com/datafibers/df_demo/blob/master/df-environment/df-env-vagrant/installvm.sh) is used to generate different profiles for VM setup.  
       ./installvm.sh
-><img src="image/information.jpg" width="45" height="45"/> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant
+><img src="image/information.jpg" width="45" height="45"/> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant. 
+
+Below are commonly used folders in the VirtualBox Ubuntu.
+* Dependency software, such as confluent/Kafka, Hive, Hadoop, Flink, are installed in the **/opt/** folder
+* The config used for Dependency software are in **/mnt/etc** folder
+* Logs are kept in **/mnt/logs** 
+* Hadoop HDFS are mount to folder **/mnt/dfs**
 
 ## Install DF Packages
 To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
 
     curl -sL http://www.datafibers.com/install | bash -
+    
+After running above installation script, following folders and artifacts are installed in the folder where you run the installation.
+* **df_config/** folder: All configuration files are here.
+* **df_connect/** folder: Where to keep DF connect jars.
+* **df_github/** folder: Where to keep DF source code downloaded.
+
+DataFibers application jar and environment start shell scripts are all installed in the folder where to install.
+
+    
