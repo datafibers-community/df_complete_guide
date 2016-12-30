@@ -1,14 +1,14 @@
 # Design Overview
-Most DataFibers components support ***L***ist, ***A***dd, ***U***pdate, and ***D***elete operations. In short, we call it **LAUD** operation. Below is over DataFibers communication sequence diagram for below core functional components.
+DataFibers application supports operations, such as ***L***ist, ***A***dd, ***U***pdate, and ***D***elete operations, on DF Connects or Transforms. In short, we call it **LAUD** operation. Below are DataFibers sequence diagram for common LAUD operations.
 
-* Connect LAUD: Procedure for connect operations.
-* Transform LUAD: Procedure for transform operations.
-* Schema Registry LUA: Procedure for schema operations. 
-* Install L: Procedure for list of installed connects/transforms.
-* Status Sync.: Procedure for synchronize DataFibers' Status.
+* Connect LAUD: Sequence for connect operations.
+* Transform LAUD: Sequence for transform operations.
+* Schema Registry LAU: Sequence for schema operations. 
+* Installed L: Sequence for list of installed connects/transforms.
+* Status Sync.: Sequence for synchronizing status.
 
 ## Connect LAUD
-The Connect follows LAUD operation as follows.
+The Connect performs LAUD operation as follows.
 
 {% plantuml %}
 actor Rest_Client
@@ -27,7 +27,7 @@ Rest_Client <-- DF_Service : Response LAUD Connect
 {% endplantuml %}
 
 ## Transform LAUD
-The Connect follows LAUD operation as follows.
+The Connect performs LAUD operation as follows.
 
 {% plantuml %}
 actor Rest_Client
@@ -75,9 +75,9 @@ Rest_Client <-- DF_Service : Response list installed
 {% endplantuml %}
 
 ## Status Sync.
-There are following sub-components here.
+There are following functions to get status update regularly.
 
-### Kafka Connect status sync.
+### Kafka Connect Sync.
 DataFibers application launches a background daemon for regular synchronizing the Kafka connect status with what's in the repository (MongoDB).
 
 {% plantuml %}
@@ -95,8 +95,8 @@ note right: if the status has no change, \ngo to next Connect
 MongoDB --> DF_Service : Response Connect status updated
 {% endplantuml %}
 
-### Meta-data sync to repository.
-DataFibers application does not involve into the metadata sync path directly, except launch the MongoDBSink connect and creating a Avro schema for the metadata.
+### Metadata Sync.
+DataFibers application does not involve into the metadata sync path directly, except launching the MongoDBSink and creating a Avro schema for the metadata.
 
 {% plantuml %}
 activate Connect
@@ -114,7 +114,8 @@ Kafka_Connect <-- MongoDB: Response sink done
 {% endplantuml %}
 
 
-### Flink Transform status sync.
-### Import all Kafka connects when started.
+### Flink Transform Sync.
 
+### Connects Initial Sync.
+When DF starts, it first imports all available connect from Kafka connect.
 
