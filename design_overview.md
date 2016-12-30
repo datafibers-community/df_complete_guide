@@ -77,7 +77,7 @@ Rest_Client <-- DF_Service : Response list installed
 ## Status Sync.
 There are following functions to get status update regularly.
 
-### Kafka Connect Sync.
+### Connect Sync.
 DataFibers application launches a background daemon for regular synchronizing the Kafka connect status with what's in the repository (MongoDB).
 
 {% plantuml %}
@@ -114,8 +114,8 @@ Kafka_Connect <-- MongoDB: Response sink done
 {% endplantuml %}
 
 
-### Flink Transform Sync.
+### Transform Sync.
 
-### Connects Initial Sync.
+### Startup Sync.
 When DF starts, it first imports all available connect from Kafka connect.
 
