@@ -117,5 +117,19 @@ Kafka_Connect <-- MongoDB: Response sink done
 ### Transform Sync.
 
 ### Startup Sync.
-When DF starts, it first imports all available connect from Kafka connect.
+When DF starts, it first imports all available connect from repository and synchronize their status with Kafka connect.
 
+{% plantuml %}
+activate DF_Service
+database MongoDB
+activate Kafka_Connect
+
+DF_Service -> MongoDB: Request list of connect
+DF_Service <- MongoDB : Response list active connect name
+DF_Service -> Kafka_Connect : Request status from the connect
+note left: Foreach connect returned
+Kafka_Connect -> Kafka_Connect: Get connect status 
+DF_Service <-- Kafka_Connect: Response connect status
+DF_Service -> MongoDB: Request compare/update the connect status
+DF_Service <-- MongoDB : Response status updated
+{% endplantuml %}
