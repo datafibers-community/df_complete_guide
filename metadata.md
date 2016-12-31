@@ -16,6 +16,7 @@ class DFJobPOPJ {
         - private String udfUpload;
         - private HashMap<String, String> jobConfig; 
         - private HashMap<String, String> connectorConfig; 
+}        
 {% endplantuml %}
 
 | Attribute | Type| Usage |
