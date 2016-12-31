@@ -4,7 +4,8 @@ DataFibers define three type of meta data model for data structuring and seriali
 The purpose of Job model is to keep all information for task/job either for connects or transforms type of tasks in DataFibers.
 
 {% plantuml %}
-class DFJobPOPJ {
+
+        class DFJobPOPJ {
         - private String id; 
         - private String taskId;
         - private String name;
@@ -16,7 +17,7 @@ class DFJobPOPJ {
         - private String udfUpload;
         - private HashMap<String, String> jobConfig; 
         - private HashMap<String, String> connectorConfig; 
-}        
+        }        
 {% endplantuml %}
 
 | Attribute | Type| Usage |
