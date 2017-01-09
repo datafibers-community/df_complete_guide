@@ -54,3 +54,17 @@ With maturity of open source big data framework, open source big data applicatio
 
 At DataFibers, we believe open source big data will definitely go for flourish especially when we see more framework becomes mature and stable. Big data applications will leverage various of matured big data framework to speed up landing big data technology and innovations to business use cases. 
 
+### ETL For The Future
+ETL stands for **E**xtract, **T**ransformation, and **L**oad. This is the most frequently used terms for data processing. Almost 80% of data warehousing and data analysis activities are about ETL. Therefore, ETL tools and methodology are very important for any type of data processing, especially on big data processing. There are three phase of ETL technologies in its evolution as follows.
+
+#### ETL Centric Application
+In this phase, ETL application is typical a central application server with multiple clients. ETL processing requires a dedicate cluster to firstly acquire data from external system, then perform transformation in the ETL cluster. At the end, the transformed data are loaded to the target. Since ETL tools are used to read or write with RDBMS quite often, "pushing down" the transformation logic to the RDBMS either to source or target are support quite often for better performance. This also comes to another terms after "**ETL**" as "**ELT**" by leveraging powerful computing resource in the RDBMS clusters.
+
+#### ETL On Yarn
+
+
+#### ETL On Queue
+
+
+
+
