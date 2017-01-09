@@ -61,9 +61,11 @@ ETL stands for **E**xtract, **T**ransformation, and **L**oad. This is the most f
 In this phase, ETL application is typical a central application server with multiple clients. ETL processing requires a dedicate cluster to firstly acquire data from external system, then perform transformation in the ETL cluster. At the end, the transformed data are loaded to the target. Since ETL tools are used to read or write with RDBMS quite often, "pushing down" the transformation logic to the RDBMS either to source or target are support quite often for better performance. This also comes to another terms after "**ETL**" as "**ELT**" by leveraging powerful computing resource in the RDBMS clusters.
 
 #### ETL On Yarn
-
+to be added
 
 #### ETL On Queue
+to be added
+
 
 
 
