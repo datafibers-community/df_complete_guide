@@ -49,8 +49,8 @@ If it still does not work, comment above line and try it again.
 
    ```
    replication:
-       replSet: rs0
-       oplogSize: 1024
+       replSetName: rs0
+       oplogSizeMB: 1024
    ```
 
    This will give your MongoDB server a replica set identity of rs0 and will allow your oplog to grow upto 1024mb.

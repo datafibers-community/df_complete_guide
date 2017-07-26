@@ -20,14 +20,15 @@ Right now, DataFibers runs on Linux system. You can install various distribution
 
 ## Environment Setup - Docker
 ## Environment Setup - Vagrant
-The pre-build scripts for vagrant setup is available in [DF_DEMO](https://github.com/datafibers-community/df_demo) repository. This pre-build VM has following softs installed automatically.
+The pre-build scripts for vagrant setup is available in [DF_DEMO](https://github.com/datafibers-community/df_demo) repository. This pre-build VM has following software installed automatically.
 * Java 1.8
 * Apache Maven 3.0.5
 * Git 1.9.1
-* Apache Hadoop v2.5
+* Apache Hadoop v2.6
 * Apache Hive 1.2.1
 * Confluent 3.0.1 with Apache Kafka 0.10.0.1
-* Apache Flink 1.1.3
+* Apache Flink 1.3.0
+* MongoDB 3.4
 
 Please following steps below to get the VM up running.
 * Make sure Vagrant is installed from [here](https://www.vagrantup.com/downloads.html) or [here](https://github.com/tknerr/bills-kitchen). Run below commands either in Linux or [GitBash Console](https://git-for-windows.github.io/) in Windows.
