@@ -36,7 +36,7 @@ It compains "Network Connect Issue" when connecting MongoDB from tool, such as [
 
 ```
 net:
-   bindIp:0.0.0.0
+   bindIp: 0.0.0.0
 ```
 
 If it still does not work, comment above line and try it again.
@@ -49,8 +49,8 @@ If it still does not work, comment above line and try it again.
 
    ```
    replication:
-       replSet:rs0
-       oplogSize:1024
+       replSet: rs0
+       oplogSize: 1024
    ```
 
    This will give your MongoDB server a replica set identity of rs0 and will allow your oplog to grow upto 1024mb.
@@ -103,7 +103,7 @@ kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-begin
 **Solution**, every avro message inside of Confluent Platform has following structure:
 
 ```
-<magic byte 0x0 1 byte> <schema id (4 bytes)> <Avro blob>    
+<magic byte 0x0 1 byte> <schema id (4 bytes)> <Avro blob>
 ```
 
 Therefore, we need to manually add these extra bytes before each Avro message.
@@ -114,7 +114,7 @@ Therefore, we need to manually add these extra bytes before each Avro message.
 
 Vagrant is not able to mount /vagrant folder in version 1.8.0 for windows.
 
-**Solution**:   
+**Solution**:  
 Update the code windows\_unc\_path\(\) in C:\HashiCorp\Vagrant\embedded\gems\gems\vagrant-1.8.1\lib\vagrant\util\platform.rb to:
 
 ```
