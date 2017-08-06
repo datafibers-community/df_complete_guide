@@ -131,5 +131,3 @@ DF_Service <-- Kafka_Connect: Response connect status
 DF_Service -> MongoDB: Request compare/update the connect status
 DF_Service <-- MongoDB : Response status updated
 {% endplantuml %}
-
-### Transform Sync.
