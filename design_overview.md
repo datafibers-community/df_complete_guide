@@ -77,22 +77,22 @@ Rest_Client <-- DF_Service : Response list installed
 ## Status Sync.
 There are following functions to get status update regularly.
 
-### Connect Sync.
-DataFibers application launches a background daemon for regular synchronizing the Kafka connect status with what's in the repository (MongoDB).
+### Connect|Transform Sync.
+DataFibers application launches a background daemon for regular synchronizing the connect/transform status in the repository (MongoDB) against Kafka/Flink **R**est **A**pi **S**ervices (RAS).
 
 {% plantuml %}
 activate DF_Service
 database MongoDB
-activate Kafka_Connect
+activate RAS
 
-DF_Service -> MongoDB : Request list of active Connect
+DF_Service -> MongoDB : Request list of active Connect|Transform
 note right: Use vertx.setPeriodic to \ncheck every 10 sec.
-DF_Service <-- MongoDB : Response list of active Connect
-DF_Service -> Kafka_Connect: Loop to request status for each active Connect
-Kafka_Connect --> DF_Service : Response status for each active Connect
-MongoDB <- DF_Service : Request to check/update Connect status
-note right: if the status has no change, \ngo to next Connect
-MongoDB --> DF_Service : Response Connect status updated
+DF_Service <-- MongoDB : Response list of active Connect|Transform
+DF_Service -> RAS: Loop to request status for each active Connect|Transform
+RAS --> DF_Service : Response status for each active Connect|Transform
+MongoDB <- DF_Service : Request to check/update the status
+note right: if the status has no change, \ngo to next Connect|Transform
+MongoDB --> DF_Service : Response Connect|Transform status updated
 {% endplantuml %}
 
 ### Metadata Sync.
@@ -115,6 +115,7 @@ Kafka_Connect <-- MongoDB: Response sink done
 
 ### Startup Sync.
 When DF starts, it first imports all available connect from repository and synchronize their status with Kafka connect.
+><img src="image/information.jpg" width="45" height="45"/> We do not create start-up synchronize for transforms since we are not able to rebuilt the task configurations if we import the active transforms from Flink.
 
 {% plantuml %}
 activate DF_Service
