@@ -96,7 +96,7 @@ MongoDB --> DF_Service : Response Connect|Transform status updated
 {% endplantuml %}
 
 ### Metadata Sync.
-DataFibers application does not involve into the metadata sync path directly, except launching the MongoDBSink and creating a Avro schema for the metadata.
+DataFibers application does not involve into the metadata, which keeps track of files processed by connects or transforms, synchronize path directly. For instead, it creates the metadata schema, and then launches the MongoDBSink to ship data into repository.
 
 {% plantuml %}
 activate Connect
