@@ -17,9 +17,9 @@ When doing NG-Admin local domain test. Browser has such error **"**_**XMLHttpReq
 
 Elastic cannot access localhost:9200 from host machine.
 
-**Solution**, pls. do following two settings
+**Solution**, please do following two settings
 
-* Set port forwording 9200 guest to 9200 host in virtualbox.
+* Set port forwarding 9200 guest to 9200 host in virtualbox.
 * In elasticsearch/config/elasticsearch.yml put
 
   ```
@@ -30,7 +30,7 @@ Elastic cannot access localhost:9200 from host machine.
 
 #### Unable access mongodb from out side of VirtualBox
 
-It compains "Network Connect Issue" when connecting MongoDB from tool, such as [robomongo](https://robomongo.org/download) outside of VirtualBox.
+It complains "Network Connect Issue" when connecting MongoDB from tool, such as [robomongo](https://robomongo.org/download) outside of VirtualBox.
 
 **Solution**, make sure in your `/etc/mongod.conf` file you have the following line and restart the mongodb `sudo service mongod restart`to make it work immediately.
 
@@ -78,6 +78,15 @@ If it still does not work, comment above line and try it again.
    > show collections
    oplog.rs
    ```
+
+#### Unable auto start mongodb after reboot in Ubuntu 16
+
+In the Ubuntu 16 with MongoDB cannot auto start after reboot. Use following command to fix this.
+
+```
+sudo systemctl enable mongod.service
+sudo systemctl daemon-reload
+```
 
 ### Kafka Issue
 
