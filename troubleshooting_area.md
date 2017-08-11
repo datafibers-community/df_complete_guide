@@ -79,7 +79,7 @@ If it still does not work, comment above line and try it again.
    oplog.rs
    ```
 
-#### Unable auto start mongodb after reboot in Ubuntu 16
+#### Unable start MongoDB automatically after reboot in Ubuntu 16
 
 In the Ubuntu 16 with MongoDB cannot auto start after reboot. Use following command to fix this.
 
