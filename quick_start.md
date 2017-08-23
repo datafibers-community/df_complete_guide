@@ -25,13 +25,25 @@ A command df_ops is added to the PATH environment variable to operate df data se
     
 |[operation]|Usage|
 | ------------- | ------------- |
-|start   || 
-|stop   || 
-|restart   || 
-|status|| 
-|format|| 
-|install|| 
-|upgrade| not support yet| 
-|admin|not support yet| 
+|start   |start all environment and df services| 
+|stop   |stop all environment and df services| 
+|restart   |restart all environment and df services| 
+|status|show status of all environment and df services| 
+|format|format Hadoop, remove all logs and data| 
+|install|install df packages| 
+|upgrade| not support yet, upgrade environment and df packages| 
+|admin|not support yet, perform df admin operations| 
+
+|[service]|Usage|
+| ------------- | ------------- |
+|default   |start df services with Confluent, Flink environment. This is by default.| 
+|min   |start df services with Confluent environment.| 
+|max   |start df services with Confluent, Flink, Hadoop environment.| 
+
+|[option]|Usage|
+| ------------- | ------------- |
+|d|run df services in debug mode. This is by default.| 
+|other|run df services in normal mode|  
+
 
 ## Run A Demo
