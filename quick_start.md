@@ -18,7 +18,7 @@ After this, DF will launch DataFiber data service at 8080 and web console servic
 
 ><img src="image/tip.jpg" width="45" height="45"/> DF application has couple of command line options. You can use -h or --help options to see more details ```java -jar datafiber_jar_file.jar -h```
 
-## Operate DF Applications
+## Operate DF Service
 A command **df_ops** is added to the PATH variable to operate df data service in more convenient way. By using this command, both environment and data service can be operated easily. This command has following options.
     
     df_ops [operation] [service] [option]
