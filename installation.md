@@ -55,11 +55,12 @@ To install DataFibers packages as well as scripts tools, run the follow command 
 
     curl -sL http://www.datafibers.com/install | bash -
     
-After running above installation script, following folders and artifacts are installed in the folder where you run the installation.
-* **df_config/** folder: All configuration files are here.
-* **df_connect/** folder: Where to keep DF connect jars.
-* **df_github/** folder: Where to keep DF source code downloaded.
+After running above installation script, following folders and artifacts are installed where you run the installation.
+* **conf/** folder: All configuration files are here.
+* **lib/** folder: Where to keep DF connect and data service jars.
+* **repo/** folder: Where to keep DF source code downloaded.
+* **bin/** folder: Where to keep scripts for run and admin.
 
-DataFibers application jar and environment start shell scripts are all installed in the folder where to install.
+In addition, the installation folder is set as $DF_HOME variable. $DF_HOME/bin is added to the system PATH. The df_ops command is also added to the .profile to be accessed anywhere. For more details regarding to df_ops, refer to this [section](/quick_start.html#Operate_DF_Service).
 
     
