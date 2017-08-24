@@ -19,7 +19,7 @@ After this, DF will launch DataFiber data service at 8080 and web console servic
 ><img src="image/tip.jpg" width="45" height="45"/> DF application has couple of command line options. You can use -h or --help options to see more details ```java -jar datafiber_jar_file.jar -h```
 
 ## Operate DF Applications
-A command df_ops is added to the PATH environment variable to operate df data service in more convenient way. It has following command options.
+A command **df_ops** is added to the PATH variable to operate df data service in more convenient way. By using this command, both environment and data service can be operated easily. This command has following options.
     
     df_ops [operation] [service] [option]
     
@@ -33,15 +33,13 @@ A command df_ops is added to the PATH environment variable to operate df data se
 |install|install df packages| 
 |upgrade| not support yet, upgrade environment and df packages| 
 |admin|not support yet, perform df admin operations| 
-
-|[service]|Usage|
-| ------------- | ------------- |
+|||
+|**[service]**|**Usage**|
 |default   |start df services with Confluent, Flink environment. This is by default.| 
 |min   |start df services with Confluent environment.| 
 |max   |start df services with Confluent, Flink, Hadoop environment.| 
-
-|[option]|Usage|
-| ------------- | ------------- |
+|||
+|**[option]**|**Usage**|
 |d|run df services in debug mode. This is by default.| 
 |other|run df services in normal mode|  
 
