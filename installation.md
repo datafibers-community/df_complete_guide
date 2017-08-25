@@ -61,6 +61,6 @@ After running above installation script, following folders and artifacts are ins
 * **repo/** folder: Where to keep DF source code downloaded.
 * **bin/** folder: Where to keep scripts for run and admin.
 
-In addition, the installation folder is set as $DF_HOME variable. $DF_HOME/bin is added to the system PATH. The df_ops command is also added to the .profile to be accessed anywhere. For more details regarding to df_ops, refer to this [section](/quick_start.html#Operate_DF_Service).
+In addition, the installation folder is set as $DF_HOME variable. $DF_HOME/bin is added to the system PATH. The **df_ops** or **dfops** alias is also added to the .profile to be accessed anywhere. For more details regarding to **df_ops**, refer to this [section](/quick_start.html#Operate_DF_Service).
 
     
