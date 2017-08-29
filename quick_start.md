@@ -12,6 +12,7 @@ A command alias **df_ops** or **dfops** is available to operate df data service 
 |status|show status of all environment and df services| 
 |format|format Hadoop, remove all logs and data| 
 |install|install df packages| 
+|update|fetch df update packages| 
 |help| show command help menu| 
 |admin|perform df admin operations| 
 |||
