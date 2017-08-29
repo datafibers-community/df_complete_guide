@@ -49,11 +49,11 @@ To customize the environment setup, run [installvm.sh](https://github.com/datafi
 
 ><img src="image/information.jpg" width="45" height="45"/> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant. 
 
-Below are commonly used folders in the VirtualBox Ubuntu.
-* Dependency software, such as confluent/Kafka, Hive, Hadoop, Flink, are installed in the **/opt/** folder
-* The config used for Dependency software are in **/mnt/etc** folder
-* Logs are kept in **/mnt/logs** 
-* Hadoop HDFS are mount to folder **/mnt/dfs**
+Below are common folders used by the DataFibers package.
+* **/opt** folder: Dependency software, such as confluent/Kafka, Hive, Hadoop, Flink, are installed here 
+* **/mnt/etc** folder: The config used for Dependency software.
+* **/mnt/logs** folder: Where ti keep logs.
+* **/mnt/dfs** folder: Hadoop HDFS are mount to here.
 
 ## Install DF Packages
 To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
