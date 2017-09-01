@@ -50,22 +50,22 @@ To customize the environment setup, run [installvm.sh](https://github.com/datafi
 ><img src="image/information.jpg" width="45" height="45"/> Once the vagrant installation scripts run completely, you will see a DF_DEMO instance running in VirtualBox. You can login by using username\password as vagrant\vagrant. 
 
 Below are common folders used by the DataFibers package.
-* **/opt** folder: Dependency software, such as confluent/Kafka, Hive, Hadoop, Flink, are installed here 
-* **/mnt/etc** folder: The config used for Dependency software.
-* **/mnt/logs** folder: Where ti keep logs.
-* **/mnt/dfs** folder: Hadoop HDFS are mount to here.
+* **/opt** : Dependent software, such as confluent/Kafka, Hive, Hadoop, Flink, are installed here. 
+* **/mnt/etc** : The config used for dependent software.
+* **/mnt/logs** : Where to keep logs.
+* **/mnt/dfs** : Hadoop file system are mount here.
 
 ## Install DF Packages
 To install DataFibers packages as well as scripts tools, run the follow command in the folder where you want to setup as follows.
 
     curl -sL http://www.datafibers.com/install | bash -
     
-After running above installation script, following folders and artifacts are installed where you run the installation.
-* **conf/** folder: All configuration files are here.
-* **lib/** folder: Where to keep DF connect and data service jars.
-* **repo/** folder: Where to keep DF source code downloaded.
-* **bin/** folder: Where to keep scripts for run and admin.
+After running above installation script, following folders and artifacts are installed in the current folder.
+* **conf/** : All configuration files are here.
+* **lib/** : Where to keep certified connect and service jars.
+* **repo/** : Where to keep source code.
+* **bin/** : Where to keep operation and administration scripts.
 
-In addition, the installation folder is set as $DF_HOME variable. $DF_HOME/bin is added to the system PATH. The **df_ops** or **dfops** alias is also added to the .profile to be accessed anywhere. For more details regarding to **df_ops**, refer to this [section](/quick_start.html#Operate_DF_Service).
+In addition, the installation folder (current folder) is set as $DF_HOME variable in **~/.profile**. $DF_HOME/bin is added to the system PATH. The **df_ops** or **dfops** alias is also added to the **~/.profile** so the command can be accessed anywhere. For more details regarding to operation commands, please refer to this [section](/quick_start.html#Operate_DF_Service).
 
     
