@@ -17,6 +17,7 @@
 * [df_demo](https://github.com/datafibers-community/df_demo) - This is where we build demo for DataFibers and other tookit
 * [df_complete_guide](https://github.com/datafibers-community/df_complete_guide) - This is the source for this book
 * [df_certified_connects](https://github.com/datafibers-community/df_certified_connects) - This is where we keep the connects self made or certified for DataFibers
+* [df_web_admin](https://github.com/datafibers-community/df_web_admin) - This is where we keep the web admin ui
 * [df_api_doc](https://github.com/datafibers-community/df_api_doc) - This is script for rest api document generator as well as latest document backup
 * [df_doc](https://github.com/datafibers-community/df_doc) - This is where we keep materials for rugular meetup and trainings
 
