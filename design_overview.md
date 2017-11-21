@@ -1,4 +1,4 @@
-# Design Overview
+# Architecture Design
 DataFibers application supports operations, such as ***L***ist, ***A***dd, ***U***pdate, and ***D***elete operations, on DF Connects or Transforms. In short, we call it **LAUD** operation. Below are DataFibers sequence diagram for common LAUD operations.
 
 * Connect LAUD: Sequence for connect operations.
