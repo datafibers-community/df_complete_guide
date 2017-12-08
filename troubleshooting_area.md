@@ -117,6 +117,31 @@ kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-begin
 
 Therefore, we need to manually add these extra bytes before each Avro message.
 
+### Spark Issues
+
+#### Password less login with start-all.sh
+
+Start spark cluster using start-all.sh requires password. We need to setup password less login in to bypass this. This is also applied to the Hadoop settings. Password-less ssh should be enabled on all nodes:
+
+```
+ssh-keygen -t rsa -P ''
+
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+```
+
+Check that ssh works locally without password:
+
+```
+ssh localhost 
+```
+
+Copy public key from the master node to worker node if you are in real cluster. Ignore this step in standalone machine.
+
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@worker_node_hostname
+```
+
 ### Vagrant Issues
 
 #### Mount folder failure
