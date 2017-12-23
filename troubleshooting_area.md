@@ -133,7 +133,7 @@ chmod 600 ~/.ssh/authorized_keys
 Check that ssh works locally without password:
 
 ```
-ssh localhost 
+ssh localhost
 ```
 
 Copy public key from the master node to worker node if you are in real cluster. Ignore this step in standalone machine.
@@ -173,6 +173,16 @@ When using hive interpreter in Zeppelin, it reports "org.apache.hive.jdbc.HiveDr
 cp /opt/hive/lib/hive-jdbc-1.2.1-standalone.jar /opt/zeppelin/interpreter/jdbc/
 cp /opt/hadoop/share/hadoop/common/hadoop-common-2.6.0.jar /opt/zeppelin/interpreter/jdbc/
 /opt/zeppelin/bin/zeppelin-daemon.sh reload
+```
+
+### OS Issue
+
+#### Ubuntu Default Date is UTC, prefer to set to Local Time
+
+DataFiber meta data use local OS time. If you want to see the meta data in local time, we need to change the OS time from default UTC to local time by following command.
+
+```
+sudo dpkg-reconfigure tzdata
 ```
 
 
