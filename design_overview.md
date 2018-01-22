@@ -135,7 +135,7 @@ DF_Service <-- MongoDB : Response status updated
 {% endplantuml %}
 
 ## Stream Back.
-When batch processing is complete, DF supports to stream back the result set to the queue for further consuming or transformation. It first exports the result set to a json file. Then, leverage file connector to send the file content to the queue. Once succeeded, the stream back connector will be deleted.
+When batch processing is complete, DF supports to stream back the result set to the queue for further consuming or transformation. It first exports the result set to a json file. Then, it leverages file connector to send the file content to the queue when df status sync. daemon detects the batch file export is done. Once succeeded, the stream back connector will be deleted.
 
 {% plantuml %}
 activate DF_Service
