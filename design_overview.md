@@ -6,6 +6,8 @@ DataFibers application supports operations, such as ***L***ist, ***A***dd, ***U*
 * Schema Registry LAU: Sequence for schema operations. 
 * Installed L: Sequence for list of installed connects/transforms.
 * Status Sync.: Sequence for synchronizing status.
+* Stream Back: Sequence to stream back the batch result to queue.
+
 
 ## Connect LAUD
 The Connect performs LAUD operation as follows.
@@ -130,4 +132,20 @@ Kafka_Connect -> Kafka_Connect: Get connect status
 DF_Service <-- Kafka_Connect: Response connect status
 DF_Service -> MongoDB: Request compare/update the connect status
 DF_Service <-- MongoDB : Response status updated
+{% endplantuml %}
+
+### Stream Back.
+When batch processing is complete, DF supports to stream back the result set to the queue for further consuming or transformation. It first exports the result set to a json file. Then, leverage file connector to send the file content to the queue. Once succeeded, the stream back connector will be deleted.
+
+{% plantuml %}
+activate DF_Service
+activate Spark
+activate Kafka_Connect
+
+DF_Service -> Batch_Transform : Request batch transform
+note left: Foreach connect returned
+Batch_Transform -> Batch_Transform: Transform and export to json 
+DF_Service <-- Batch_Transform: Response complete and change to streaming status
+DF_Service -> Kafka_Connect: Request stream the json to queue
+DF_Service <-- Kafka_Connect : Stream back is completed and delete the connect
 {% endplantuml %}
