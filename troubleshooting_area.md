@@ -161,6 +161,22 @@ end
 
 Or you can copy and replace using file [here](https://raw.githubusercontent.com/datafibers-community/df_demo/master/df-environment/df-env-vagrant/vagrant_patch/platform.rb).
 
+### VM Issues
+
+#### Mount a local shared folder with VM
+
+1. Create a folder on the Host computer that you would like to share, for example~/share
+
+2. Boot the Guest operating system in virtualbox
+
+3. Select Devices -&gt; Shared Folders.
+
+4. Choose the 'Add' button.
+
+5. Select~/share and 'Make permanent' option
+
+6. Mount the folder in the ubuntu in VM `sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) share /mnt/share`
+
 ### Zeppelin Issue
 
 #### Hive Driver Not Found
