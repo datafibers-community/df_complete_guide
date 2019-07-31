@@ -30,3 +30,7 @@ A command alias **df_ops** or **dfops** is available to operate DataFibers servi
 ## Run A Demo
 Once DF started at default port 8080, a web admin console is available at http://localhost:8000/admin/.
 
+There is short demo about using DataFibers to process NetCDF as below. 
+https://youtu.be/S1CsAf5qCBQ
+
+
