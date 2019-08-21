@@ -25,7 +25,7 @@ Right now, DataFibers runs on Linux Ubuntu system. You can install it locally or
 
 ## Environment Setup - Docker
 
-To be update
+To be added
 
 ## Environment Setup - Vagrant
 

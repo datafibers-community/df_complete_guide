@@ -57,19 +57,19 @@ There are generally two ways to debug in DF applications
 
 Server debug is to run server application in debug mode. In this case, we still keep DF dependecy environment, such as Kafka, running inside of VirtualBox, but to run the DF Data Service as server in debug mode outside of VirtualBox.
 
-In order to make this work, we'll need to reforward DF appliation related port, such as 8000 \(for UI\) and 8080 \(for REST Service\) to other port number, such as 8000 to 7000, to make it avaliable for the DF application outside of VirtualBox as follows.
+In order to make this work, we'll need to forward DF application related port, such as 8000 \(for UI\) and 8080 \(for REST Service\) to other port number, such as 8000 to 7000, to make it available for the DF application outside of VirtualBox as follows.
 
  ![](../.gitbook/assets/debug_port.PNG)  
  Figure 2.1 Forward Port in VirtualBox for Debug
 
-Also, make sure all of the DF dependecy application, such as Kafka, ZooKeeper, have their port forward outside of VirtualBox. Then, we can debug run the entrance function at DFInitService.main\(\).
+Also, make sure all of the DF dependency application, such as Kafka, ZooKeeper, have their port forward outside of VirtualBox. Then, we can debug run the entrance function at DFInitService.main\(\).
 
  ![](../.gitbook/assets/debug_run_idea.png)  
  Figure 2.2 Debug DF DataService in IDEA
 
 ### Client Debug
 
-Client side debug is to run client application in debug mode by connecting full DF service in the VirtualBox. All port forwarding should be in place to work in this mode. For features closely related to the DF dependecy application, such as Kafka, ZooKeeper, Flink, etc, you can easily use this mode.
+Client side debug is to run client application in debug mode by connecting full DF service in the VirtualBox. All port forwarding should be in place to work in this mode. For features closely related to the DF dependency application, such as Kafka, ZooKeeper, Flink, etc, you can easily use this mode.
 
 If you meet any exception regarding to connection timeout especially on Kafka or MongoDB, you can refer to the [troubleshooting area](https://github.com/datafibers-community/datafibers-complete-guide/tree/de0445ca4d80e881f015535480562ba3ba4d8169/troubleshooting_area.html#Vagarant_Issues) in this guideline.
 

@@ -4,7 +4,7 @@
 
 ### AngularJS Issue
 
-#### Access-Control-Allow-Origin header access is not allowed
+#### 1. Access-Control-Allow-Origin header access is not allowed
 
 When doing NG-Admin local domain test. Browser has such error **"**_**XMLHttpRequest cannot load ??. No  
 'Access-Control-Allow-Origin' header is present on the requested Resource. Origin 'null' is therefore not allowed access.**_**"**
@@ -13,7 +13,7 @@ When doing NG-Admin local domain test. Browser has such error **"**_**XMLHttpReq
 
 ### Elastic Issues
 
-#### localhost unreachable
+#### 1. localhost unreachable
 
 Elastic cannot access localhost:9200 from host machine.
 
@@ -28,7 +28,7 @@ Elastic cannot access localhost:9200 from host machine.
 
 ### MongoDB Issue
 
-#### Unable access mongodb from out side of VirtualBox
+#### 1. Unable access mongodb from out side of VirtualBox
 
 It complains "Network Connect Issue" when connecting MongoDB from tool, such as [robomongo](https://robomongo.org/download) outside of VirtualBox.
 
@@ -41,7 +41,7 @@ net:
 
 If it still does not work, comment above line and try it again.
 
-#### How to setup an oplog on a single MongoDB instance
+#### 2. How to setup an oplog on a single MongoDB instance
 
 [MongoDB Connect Source](https://github.com/DataReply/kafka-connect-mongodb) uses Mongodb oplog to fetch data. The MongoDB oplog allows you to keep track of changes that have happened on your database in real-time. This is a very useful tool that isn’t offered out of the box with a single server instance. You can follow these steps to enable to oplog on a standalone MongoDB instance.
 
@@ -79,7 +79,7 @@ If it still does not work, comment above line and try it again.
    oplog.rs
    ```
 
-#### Unable start MongoDB automatically after reboot in Ubuntu 16
+#### 3. Unable start MongoDB automatically after reboot in Ubuntu 16
 
 In the Ubuntu 16 with MongoDB cannot auto start after reboot. Use following command to fix this.
 
@@ -90,7 +90,7 @@ sudo systemctl daemon-reload
 
 ### Kafka Issue
 
-#### Cannot connect Kafka in VirtualBox from outside IDE, such as IDEA
+#### 1. Cannot connect Kafka in VirtualBox from outside IDE, such as IDEA
 
 When we need to debug the code, we prefer to use IDE outside of the VirtualBox to connect to the Kafka Service in the VirtalBox. We need to ensure following settings are in place.
 
@@ -101,15 +101,15 @@ host.name=localhost
 advertised.host.name=127.0.0.1
 ```
 
-#### Kafka Avro Console Consumer cannot consume message from producer
+#### 2. Kafka Avro Console Consumer cannot consume message from producer
 
-When we use regular Kafka producer/publisher, such as [code here](https://gist.github.com/datafibers/d063b255b50fa34515c0ac9e24d4485c), to send Avro message to Kafka, the regular avro console consumer like below will have exception reported.
+When we use regular Kafka producer/publisher, such as [code here](https://gist.github.com/datafibers/d063b255b50fa34515c0ac9e24d4485c), to send Avro message to Kafka, the regular AVRO console consumer like below will have exception reported.
 
 ```text
 kafka-avro-console-consumer --zookeeper localhost:2181 --topic test --from-beginning
 ```
 
-**Solution**, every avro message inside of Confluent Platform has following structure:
+**Solution**, every AVRO message inside of Confluent Platform has following structure:
 
 ```text
 <magic byte 0x0 1 byte> <schema id (4 bytes)> <Avro blob>
@@ -119,7 +119,7 @@ Therefore, we need to manually add these extra bytes before each Avro message.
 
 ### Spark Issues
 
-#### Password less login with start-all.sh
+#### 1. Password less login with start-all.sh
 
 Start spark cluster using start-all.sh requires password. We need to setup password less login in to bypass this. This is also applied to the Hadoop settings. Password-less ssh should be enabled on all nodes:
 
@@ -144,7 +144,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@worker_node_hostname
 
 ### Vagrant Issues
 
-#### Mount folder failure
+#### 1. Mount folder failure
 
 Vagrant is not able to mount /vagrant folder in version 1.8.0 for windows.
 
@@ -163,7 +163,7 @@ Or you can copy and replace using file [here](https://raw.githubusercontent.com/
 
 ### VM Issues
 
-#### Mount a local shared folder with VM
+#### 1. Mount a local shared folder with VM
 
 1. Create a folder on the Host computer that you would like to share, for example~/share
 2. Boot the Guest operating system in virtualbox
@@ -174,11 +174,11 @@ Or you can copy and replace using file [here](https://raw.githubusercontent.com/
 
 ### Zeppelin Issue
 
-#### Hive Driver Not Found
+#### 1. Hive Driver Not Found
 
 When using hive interpreter in Zeppelin, it reports "org.apache.hive.jdbc.HiveDriver class java.lang.ClassNotFoundExceptionClassNotFoundException"
 
-**Solution**: Copy proper hadoop and hive jar to the Zeppelin interpreter folder and restart Zeppelin.
+**Solution**: Copy proper Hadoop and Hive jar to the Zeppelin interpreter folder and restart Zeppelin.
 
 ```text
 cp /opt/hive/lib/hive-jdbc-1.2.1-standalone.jar /opt/zeppelin/interpreter/jdbc/
@@ -188,7 +188,7 @@ cp /opt/hadoop/share/hadoop/common/hadoop-common-2.6.0.jar /opt/zeppelin/interpr
 
 ### OS Issue
 
-#### Ubuntu Default Date is UTC, prefer to set to Local Time
+#### 1. Ubuntu Default Date is UTC, prefer to set to Local Time
 
 DataFiber meta data use local OS time. If you want to see the meta data in local time, we need to change the OS time from default UTC to local time by following command.
 
