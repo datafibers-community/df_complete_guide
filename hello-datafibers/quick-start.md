@@ -37,5 +37,7 @@ Once DF started at default port 8080, a web admin console is available at [http:
 
 There is a short demo using DataFibers to process NetCDF as follows.
 
-[https://youtu.be/S1CsAf5qCBQ](https://youtu.be/S1CsAf5qCBQ)
+{% embed url="https://youtu.be/S1CsAf5qCBQ" %}
+
+
 
